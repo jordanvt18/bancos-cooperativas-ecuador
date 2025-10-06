@@ -18,7 +18,7 @@ Ayudar a la ciudadanía ecuatoriana a tomar decisiones informadas sobre dónde i
 
 ## 🚀 Ver la Aplicación
 
-👉 **[Abrir Comparador Financiero](https://TU_USUARIO.github.io/bancos-cooperativas-ecuador)**
+👉 **[Abrir Comparador Financiero](https://jordanvt18.github.io/bancos-cooperativas-ecuador)**
 
 ## 📊 Datos Incluidos
 
