@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "last_updated": "2025-09-21",
+    "version": "v1"
+  },
+  "sistema": {
+    "total_activos": 52800,
+    "total_patrimonio": 12800,
+    "instituciones": {
+      "bancos": 23,
+      "cooperativas": 157
+    },
+    "indicadores": {
+      "bancos": {
+        "solvencia_promedio": 13.5,
+        "morosidad_promedio": 3.2,
+        "liquidez_promedio": 29.4,
+        "roa_promedio": 1.12,
+        "roe_promedio": 12.8
+      },
+      "cooperativas": {
+        "solvencia_promedio": 17.8,
+        "morosidad_promedio": 4.1,
+        "liquidez_promedio": 23.7,
+        "roa_promedio": 1.7,
+        "roe_promedio": 14.0
+      }
+    },
+    "alertas": [
+      "Riesgo creciente en cooperativas segmento 2 y 3",
+      "Alta concentración en bancos principales",
+      "Tasas de interés en aumento para créditos"
+    ]
+  }
+}
