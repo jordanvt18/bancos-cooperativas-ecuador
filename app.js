@@ -56,8 +56,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Cargar los datos JSON
   async function loadData() {
-    bancosData = await fetchJson("data/bancos_expandidos.json");
-    cooperativasData = await fetchJson("data/cooperativas_expandidas.json");
+    bancosData = await fetchJson("data/bancos.json");
+    cooperativasData = await fetchJson("data/cooperativas.json");
     indicadoresSistema = await fetchJson("data/indicadores_sistema.json");
   }
 
