@@ -1,0 +1,199 @@
+/* Colores base */
+:root {
+  --color-bg-light: #fcfcf9;
+  --color-bg-dark: #121212;
+  --color-text-light: #1f2121;
+  --color-text-dark: #e0e0e0;
+  --color-primary: #2196f3;
+  --color-secondary: #90caf9;
+  --color-accent: #f44336;
+  --color-surface-light: #ffffff;
+  --color-surface-dark: #1e1e1e;
+}
+
+/* Reset básico */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--color-bg-light);
+  color: var(--color-text-light);
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-dark);
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 1rem 2rem;
+}
+
+/* Header */
+.header {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 1.5rem 0;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header__title {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* Navegación / Tabs */
+.nav {
+  background-color: var(--color-surface-light);
+  border-bottom: 2px solid var(--color-secondary);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+body.dark-mode .nav {
+  background-color: var(--color-surface-dark);
+  border-color: var(--color-secondary);
+}
+
+.nav__tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.5rem 0;
+}
+
+.nav__tab {
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  color: inherit;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  transition: border-color 0.25s ease;
+}
+
+.nav__tab:hover {
+  border-color: var(--color-secondary);
+}
+
+.nav__tab.active {
+  border-color: var(--color-primary);
+  font-weight: 700;
+}
+
+/* Main y secciones */
+.main {
+  min-height: 80vh;
+  padding: 2rem 0;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Botones */
+.btn {
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn--outline {
+  background-color: transparent;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+  transition: background-color 0.3s ease;
+}
+
+.btn--outline:hover {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.btn--sm {
+  font-size: 0.875rem;
+  padding: 0.25rem 0.75rem;
+}
+
+/* Tables - ejemplo para rankings */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+th, td {
+  text-align: left;
+  border-bottom: 1px solid var(--color-secondary);
+  padding: 0.5rem;
+  vertical-align: middle;
+}
+
+th {
+  background-color: var(--color-primary);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .nav__tabs {
+    flex-wrap: wrap;
+  }
+  .header__title {
+    font-size: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+}
+
+/* Scroll suave para tablas y contenido largo */
+.tab-content {
+  max-height: 70vh;
+  overflow-y: auto;
+  padding-right: 1rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-primary) transparent;
+}
+
+.tab-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.tab-content::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+  border-radius: 4px;
+}
+
+/* Links */
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
