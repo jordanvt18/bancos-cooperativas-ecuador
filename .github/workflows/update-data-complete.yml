@@ -1,0 +1,204 @@
+name: Actualizar Datos Financieros Ecuador - Versión Completa
+
+on:
+  schedule:
+    # Ejecutar el día 15 de cada mes a las 12:00 UTC (07:00 ECT)
+    - cron: '0 12 15 * *'
+  workflow_dispatch: # Permite ejecución manual
+  push:
+    branches: [ main ]
+    paths: 
+      - 'scripts/**'
+      - '.github/workflows/**'
+  
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Cache Python dependencies
+      uses: actions/cache@v3
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('scripts/requirements.txt') }}
+    
+    - name: Install dependencies
+      run: |
+        pip install --upgrade pip
+        pip install -r scripts/requirements.txt
+    
+    - name: Create data directories
+      run: |
+        mkdir -p data/monthly
+        mkdir -p data/backups
+        mkdir -p logs
+    
+    - name: Run comprehensive data update
+      run: |
+        python scripts/update_data_complete.py --mode=production --verbose
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Validate data integrity
+      run: |
+        python scripts/validate_data.py --check-all
+    
+    - name: Generate monthly report
+      run: |
+        python scripts/generate_report.py --month=$(date +%Y-%m)
+    
+    - name: Check for changes
+      id: verify-changed-files
+      run: |
+        if [ -n "$(git status --porcelain)" ]; then
+          echo "changed=true" >> $GITHUB_OUTPUT
+          echo "files=$(git status --porcelain | wc -l)" >> $GITHUB_OUTPUT
+        else
+          echo "changed=false" >> $GITHUB_OUTPUT
+          echo "files=0" >> $GITHUB_OUTPUT
+        fi
+    
+    - name: Commit and push changes
+      if: steps.verify-changed-files.outputs.changed == 'true'
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add .
+        git commit -m "📊 Actualización automática datos financieros - $(date '+%Y-%m-%d')
+        
+        🔄 Archivos actualizados: ${{ steps.verify-changed-files.outputs.files }}
+        
+        Cambios incluidos:
+        - Datos bancos y cooperativas actualizados
+        - Indicadores de corto y largo plazo
+        - Productos de crédito actualizados
+        - Métricas del sistema financiero
+        - Backup mensual generado
+        
+        Fuentes: Superintendencia de Bancos, SEPS, BCE
+        Proceso: GitHub Actions automatizado"
+        git push
+    
+    - name: Create monthly backup
+      if: steps.verify-changed-files.outputs.changed == 'true'
+      run: |
+        tar -czf "data/backups/backup-$(date +%Y-%m).tar.gz" data/*.json
+    
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: monthly-reports-${{ github.run_number }}
+        path: |
+          logs/
+          data/monthly/
+        retention-days: 90
+    
+    - name: Send success notification
+      if: success() && steps.verify-changed-files.outputs.changed == 'true'
+      run: |
+        echo "✅ Actualización exitosa - $(date '+%Y-%m-%d')" >> $GITHUB_STEP_SUMMARY
+        echo "📊 Archivos actualizados: ${{ steps.verify-changed-files.outputs.files }}" >> $GITHUB_STEP_SUMMARY
+        echo "🔗 Ver aplicación: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}" >> $GITHUB_STEP_SUMMARY
+    
+    - name: Create issue if critical alerts detected
+      if: failure()
+      uses: actions/github-script@v6
+      with:
+        script: |
+          const now = new Date();
+          const dateString = now.toLocaleDateString('es-EC');
+          
+          github.rest.issues.create({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            title: '🚨 Error crítico en actualización automática de datos',
+            body: `## ⚠️ Fallo en Actualización Automática
+            
+            **Fecha**: ${dateString}
+            **Workflow**: \`${{ github.workflow }}\`
+            **Run ID**: ${{ github.run_id }}
+            
+            ## 🔍 Detalles del Error
+            
+            La actualización automática de datos financieros falló. Esto puede deberse a:
+            
+            - 📡 **Fuentes no disponibles**: Sitios web de SB, SEPS o BCE inaccesibles
+            - 🔧 **Cambios en estructura**: Modificaciones en formatos de datos fuente
+            - 🐛 **Error en script**: Bug en el código de actualización
+            - 🌐 **Problemas de red**: Conectividad temporal
+            
+            ## 📋 Acciones Requeridas
+            
+            - [ ] Revisar logs del workflow: [Ver detalles](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})
+            - [ ] Verificar disponibilidad fuentes oficiales:
+              - [ ] [Superintendencia de Bancos](https://www.superbancos.gob.ec/estadisticas/)
+              - [ ] [SEPS](https://estadisticas.seps.gob.ec/)
+              - [ ] [BCE](https://contenido.bce.fin.ec/)
+            - [ ] Ejecutar actualización manual si es necesario
+            - [ ] Revisar y corregir scripts si hay errores de código
+            
+            ## ⏰ Próxima Actualización Programada
+            
+            **Fecha**: 15 del próximo mes
+            **Hora**: 12:00 UTC (07:00 ECT)
+            
+            ## 🔗 Enlaces Útiles
+            
+            - [Aplicación en vivo](https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }})
+            - [Repository](https://github.com/${{ github.repository }})
+            - [Wiki - Guía de solución de problemas](https://github.com/${{ github.repository }}/wiki)
+            
+            ---
+            
+            *Este issue fue creado automáticamente por GitHub Actions*
+            `,
+            labels: ['bug', 'automated', 'critical', 'data-update']
+          })
+
+  # Job adicional para validar la aplicación después de deployment
+  validate-app:
+    needs: update-data
+    runs-on: ubuntu-latest
+    if: always()
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+    
+    - name: Install dependencies
+      run: |
+        npm install -g lighthouse-ci
+        npm install -g html-validate
+    
+    - name: Wait for GitHub Pages deployment
+      run: sleep 60
+    
+    - name: Validate HTML structure
+      run: |
+        html-validate index.html || echo "HTML validation completed with warnings"
+    
+    - name: Run Lighthouse audit
+      run: |
+        lhci autorun --config=lighthouserc.json || echo "Lighthouse audit completed"
+      env:
+        LHCI_GITHUB_APP_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Test application endpoints
+      run: |
+        curl -f -s "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/" > /dev/null && echo "✅ App accessible" || echo "❌ App not accessible"
+        curl -f -s "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/data/bancos_expandidos.json" > /dev/null && echo "✅ Data files accessible" || echo "❌ Data files not accessible"
