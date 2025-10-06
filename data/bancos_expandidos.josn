@@ -1,0 +1,224 @@
+{
+  "metadata": {
+    "last_updated": "2025-09-21",
+    "version": "2025-09-v2"
+  },
+  "bancos": [
+    {
+      "id": 1,
+      "nombre": "Banco Pichicha",
+      "activos_mill": 19493,
+      "patrimonio_mill": 1965.1,
+      "calificacion": "AA+",
+      "solvencia": 14.2,
+      "morosidad": 2.8,
+      "liquidez": 32.1,
+      "roa": 0.79,
+      "roe": 11.2,
+      "cir": 52.3,
+      "productos_credito": {
+        "consumo": {
+          "monto_min": 1000,
+          "monto_max": 200000,
+          "tasa_min": 9.5,
+          "tasa_max": 12.8,
+          "plazo_max": 60,
+          "requisitos": [
+            "Cédula",
+            "RISE",
+            "Rol de pagos",
+            "Cuenta bancaria"
+          ]
+        },
+        "hipotecario": {
+          "monto_min": 15000,
+          "monto_max": 400000,
+          "tasa_min": 7.2,
+          "tasa_max": 8.9,
+          "plazo_max": 240,
+          "requisitos": [
+            "Entrada 20%",
+            "Ingresos demostrables",
+            "Avalúo",
+            "Escrituras"
+          ]
+        },
+        "pyme": {
+          "monto_min": 5000,
+          "monto_max": 1000000,
+          "tasa_min": 10.0,
+          "tasa_max": 14.5,
+          "plazo_max": 48,
+          "requisitos": [
+            "RUC activo",
+            "Balances",
+            "Flujo de caja",
+            "Garantías"
+          ]
+        }
+      }
+    },
+    {
+      "id": 2,
+      "nombre": "Banco del Pacifico",
+      "activos_mill": 8960,
+      "patrimonio_mill": 907.2,
+      "calificacion": "AA",
+      "solvencia": 13.8,
+      "morosidad": 3.1,
+      "liquidez": 28.9,
+      "roa": 1.0,
+      "roe": 13.5,
+      "cir": 51.0,
+      "productos_credito": {
+        "consumo": {
+          "monto_min": 2000,
+          "monto_max": 150000,
+          "tasa_min": 10.0,
+          "tasa_max": 13.5,
+          "plazo_max": 60,
+          "requisitos": [
+            "Cédula",
+            "Rol de pagos",
+            "Referencias",
+            "Cuenta bancaria"
+          ]
+        },
+        "hipotecario": {
+          "monto_min": 20000,
+          "monto_max": 350000,
+          "tasa_min": 7.5,
+          "tasa_max": 9.0,
+          "plazo_max": 300,
+          "requisitos": [
+            "Entrada 25%",
+            "Avalúo",
+            "Seguro",
+            "Ingresos demostrables"
+          ]
+        },
+        "pyme": {
+          "monto_min": 3000,
+          "monto_max": 500000,
+          "tasa_min": 11.0,
+          "tasa_max": 14.3,
+          "plazo_max": 48,
+          "requisitos": [
+            "RUC activo",
+            "Plan de negocios",
+            "Garantías",
+            "Balances"
+          ]
+        }
+      }
+    },
+    {
+      "id": 3,
+      "nombre": "Banco Guayaquil",
+      "activos_mill": 8728,
+      "patrimonio_mill": 768.3,
+      "calificacion": "AA",
+      "solvencia": 13.5,
+      "morosidad": 3.0,
+      "liquidez": 27.0,
+      "roa": 0.9,
+      "roe": 12.5,
+      "cir": 53.0,
+      "productos_credito": {
+        "consumo": {
+          "monto_min": 1000,
+          "monto_max": 180000,
+          "tasa_min": 9.8,
+          "tasa_max": 13.0,
+          "plazo_max": 72,
+          "requisitos": [
+            "Cédula",
+            "Referencias",
+            "Rol de pagos",
+            "Cuenta bancaria"
+          ]
+        },
+        "hipotecario": {
+          "monto_min": 25000,
+          "monto_max": 450000,
+          "tasa_min": 7.0,
+          "tasa_max": 8.5,
+          "plazo_max": 360,
+          "requisitos": [
+            "Entrada 15%",
+            "Avalúo Comercial",
+            "Escrituras",
+            "Seguro"
+          ]
+        },
+        "pyme": {
+          "monto_min": 2000,
+          "monto_max": 400000,
+          "tasa_min": 11.5,
+          "tasa_max": 14.8,
+          "plazo_max": 72,
+          "requisitos": [
+            "RUC vigente",
+            "Balances Auditoría",
+            "Referencias",
+            "Garantías"
+          ]
+        }
+      }
+    },
+    {
+      "id": 4,
+      "nombre": "Produbanco",
+      "activos_mill": 8200,
+      "patrimonio_mill": 626.1,
+      "calificacion": "AA+",
+      "solvencia": 14.1,
+      "morosidad": 2.9,
+      "liquidez": 32.0,
+      "roa": 0.85,
+      "roe": 13.0,
+      "cir": 50.0,
+      "productos_credito": {
+        "consumo": {
+          "monto_min": 1500,
+          "monto_max": 200000,
+          "tasa_min": 9.5,
+          "tasa_max": 12.5,
+          "plazo_max": 60,
+          "requisitos": [
+            "Cédula vigente",
+            "Rol de pagos",
+            "Buen historial crediticio",
+            "Cuenta activa"
+          ]
+        },
+        "hipotecario": {
+          "monto_min": 30000,
+          "monto_max": 500000,
+          "tasa_min": 7.0,
+          "tasa_max": 8.5,
+          "plazo_max": 240,
+          "requisitos": [
+            "Entrada 20%",
+            "Avalúo actualizado",
+            "Seguro",
+            "Escrituras"
+          ]
+        },
+        "pyme": {
+          "monto_min": 5000,
+          "monto_max": 1000000,
+          "tasa_min": 10.0,
+          "tasa_max": 13.5,
+          "plazo_max": 48,
+          "requisitos": [
+            "RUC activo",
+            "Balances",
+            "Flujo de caja",
+            "Garantías"
+          ]
+        }
+      }
+    }
+  ]
+}
