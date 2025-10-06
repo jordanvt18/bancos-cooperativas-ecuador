@@ -122,7 +122,7 @@ Proyecto bajo licencia MIT - ver archivo [LICENSE](LICENSE) para detalles.
 
 - Crear un [Issue](../../issues) para reportar bugs
 - [Discussions](../../discussions) para ideas y sugerencias
-- Email: tu-email@ejemplo.com
+- Email: 
 
 ## ⭐ Apoyar el Proyecto
 
