@@ -1,0 +1,12 @@
+{
+  "name": "bancos-cooperativas-ecuador",
+  "version": "1.0.0",
+  "description": "Comparador financiero completo Ecuador - Indicadores avanzados y módulo crédito",
+  "main": "index.html",
+  "scripts": {
+    "update": "python scripts/update_data_complete.py",
+    "serve": "python -m http.server 8000",
+    "deploy": "gh-pages -d ."
+  },
+  "license": "MIT"
+}
