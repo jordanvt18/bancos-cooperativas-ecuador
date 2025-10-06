@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparador Financiero Ecuador 2025 - Versión Completa</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="header__title">Comparador Financiero Ecuador 2025 - Versión Completa</h1>
+            <div class="header__controls">
+                <button id="theme-toggle" class="btn btn--outline btn--sm">🌙 Modo Oscuro</button>
+            </div>
+        </div>
+    </header>
+    <nav class="nav">
+        <div class="container">
+            <div class="nav__tabs">
+                <button class="nav__tab active" data-tab="dashboard">Dashboard</button>
+                <button class="nav__tab" data-tab="bancos">Bancos</button>
+                <button class="nav__tab" data-tab="cooperativas">Cooperativas</button>
+                <button class="nav__tab" data-tab="indicadores">Indicadores Avanzados</button>
+                <button class="nav__tab" data-tab="credito">Módulo Crédito</button>
+                <button class="nav__tab" data-tab="comparador">Comparador</button>
+                <button class="nav__tab" data-tab="alertas">Alertas CREA</button>
+            </div>
+        </div>
+    </nav>
+    <main class="main">
+        <div class="container">
+            <!-- Aquí va el contenido dinámico de cada pestaña, manejado por app.js -->
+            <section id="dashboard" class="tab-content active">
+                <h2>Dashboard del Sistema Financiero Ecuatoriano</h2>
+                <div id="dashboard-metrics"></div>
+            </section>
+            <section id="bancos" class="tab-content"></section>
+            <section id="cooperativas" class="tab-content"></section>
+            <section id="indicadores" class="tab-content"></section>
+            <section id="credito" class="tab-content"></section>
+            <section id="comparador" class="tab-content"></section>
+            <section id="alertas" class="tab-content"></section>
+        </div>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
