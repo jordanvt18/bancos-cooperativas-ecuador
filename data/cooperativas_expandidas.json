@@ -1,0 +1,316 @@
+{
+  "metadata": {
+    "last_updated": "2025-09-22",
+    "version": "2025-09-v2",
+    "source": "Superintendencia de Economía Popular y Solidaria (SEPS)",
+    "indicators_included": [
+      "Indicadores de Corto Plazo: Liquidez, Captaciones, Morosidad por producto",
+      "Indicadores de Largo Plazo: ROA, ROE, Eficiencia operativa, Crecimiento patrimonial",
+      "Módulo de Crédito: Productos cooperativos con tasas preferenciales"
+    ]
+  },
+  "cooperativas": [
+    {
+      "id": 1,
+      "nombre": "Juventud Ecuatoriana Progresista (JEP)",
+      "nombre_corto": "JEP",
+      "ruc": "0190115798001",
+      "activos_mill": 3774.836,
+      "patrimonio_mill": 363.4,
+      "segmento": 1,
+      "calificacion": "A+",
+      "solvencia": 18.2,
+      "morosidad": 4.8,
+      "liquidez": 24.1,
+      "cobertura": 195,
+      "liquidez_inmediata": 18.5,
+      "captaciones_corto_plazo": 78.4,
+      "morosidad_consumo": 5.2,
+      "morosidad_microcredito": 6.8,
+      "morosidad_comercial": 3.9,
+      "cartera_improductiva": 4.8,
+      "roa": 1.85,
+      "roe": 14.2,
+      "eficiencia_operativa": 82.1,
+      "solvencia_estructural": 18.2,
+      "crecimiento_patrimonial_12m": 18.5,
+      "crecimiento_socios_12m": 12.3,
+      "diversificacion_productos": 8.7,
+      "productos_credito": {
+        "consumo": {
+          "monto_min": 300,
+          "monto_max": 50000,
+          "tasa_min": 12.5,
+          "tasa_max": 16.8,
+          "plazo_max_meses": 60,
+          "requisitos": [
+            "Socio activo",
+            "Cédula",
+            "Certificado ingresos",
+            "Garante personal"
+          ],
+          "ventajas": [
+            "Trámite ágil",
+            "Menos documentos",
+            "Tasas preferenciales socios"
+          ]
+        },
+        "microcredito": {
+          "monto_min": 500,
+          "monto_max": 20000,
+          "tasa_min": 15.2,
+          "tasa_max": 22.5,
+          "plazo_max_meses": 36,
+          "requisitos": [
+            "Actividad económica",
+            "RUC/RISE",
+            "Referencias comerciales",
+            "Capacidad pago"
+          ],
+          "ventajas": [
+            "Evaluación in situ",
+            "Flexibilidad garantías",
+            "Acompañamiento técnico"
+          ]
+        },
+        "credipymes": {
+          "monto_min": 1000,
+          "monto_max": 1000000,
+          "tasa_min": 11.33,
+          "tasa_max": 16.8,
+          "plazo_max_meses": 48,
+          "requisitos": [
+            "RUC activo",
+            "Balances",
+            "Plan inversión",
+            "Garantías reales/personales"
+          ],
+          "ventajas": [
+            "Tasa competitiva",
+            "Seguimiento personalizado",
+            "Periodos gracia"
+          ]
+        },
+        "hipotecario": {
+          "monto_min": 10000,
+          "monto_max": 200000,
+          "tasa_min": 8.9,
+          "tasa_max": 11.5,
+          "plazo_max_meses": 180,
+          "financiamiento_max": 70,
+          "requisitos": [
+            "Socio 6 meses",
+            "Entrada 30%",
+            "Avalúo",
+            "Seguro hipotecario"
+          ],
+          "ventajas": [
+            "Menor entrada",
+            "Proceso personalizado",
+            "Tasas fijas"
+          ]
+        }
+      },
+      "estado": "Activa",
+      "provincia": "Pichincha",
+      "socios_aprox": 180000,
+      "supervision": "SEPS",
+      "website": "https://www.jep.coop"
+    },
+    {
+      "id": 2,
+      "nombre": "Jardín Azuayo",
+      "nombre_corto": "Jardín Azuayo",
+      "ruc": "0190155722001",
+      "activos_mill": 2107.233,
+      "patrimonio_mill": 275.1,
+      "segmento": 1,
+      "calificacion": "A+",
+      "solvencia": 19.1,
+      "morosidad": 5.2,
+      "liquidez": 22.8,
+      "cobertura": 188,
+      "liquidez_inmediata": 17.2,
+      "captaciones_corto_plazo": 82.1,
+      "morosidad_consumo": 5.8,
+      "morosidad_microcredito": 7.2,
+      "morosidad_comercial": 4.1,
+      "cartera_improductiva": 5.2,
+      "roa": 2.1,
+      "roe": 15.8,
+      "eficiencia_operativa": 79.5,
+      "solvencia_estructural": 19.1,
+      "crecimiento_patrimonial_12m": 16.2,
+      "crecimiento_socios_12m": 8.9,
+      "diversificacion_productos": 9.2,
+      "productos_credito": {
+        "consumo": {
+          "monto_min": 500,
+          "monto_max": 40000,
+          "tasa_min": 13.2,
+          "tasa_max": 17.5,
+          "plazo_max_meses": 48,
+          "requisitos": [
+            "Antigüedad socio 3 meses",
+            "Cédula",
+            "Rol pagos",
+            "Garante"
+          ],
+          "ventajas": [
+            "Tasa diferenciada socios",
+            "Sin comisiones",
+            "Aprobación rápida"
+          ]
+        },
+        "microcredito": {
+          "monto_min": 300,
+          "monto_max": 15000,
+          "tasa_min": 16.8,
+          "tasa_max": 24.2,
+          "plazo_max_meses": 24,
+          "requisitos": [
+            "Actividad 6 meses",
+            "Referencias",
+            "Visita negocio",
+            "Croquis ubicación"
+          ],
+          "ventajas": [
+            "Metodología grupal",
+            "Capacitación empresarial",
+            "Renovación automática"
+          ]
+        },
+        "agropecuario": {
+          "monto_min": 1000,
+          "monto_max": 50000,
+          "tasa_min": 11.8,
+          "tasa_max": 16.2,
+          "plazo_max_meses": 60,
+          "requisitos": [
+            "Actividad agropecuaria",
+            "Título propiedad",
+            "Asistencia técnica",
+            "Seguro cultivos"
+          ],
+          "ventajas": [
+            "Periodos gracia",
+            "Pagos estacionales",
+            "Asesoría técnica"
+          ]
+        },
+        "vivienda": {
+          "monto_min": 8000,
+          "monto_max": 150000,
+          "tasa_min": 9.5,
+          "tasa_max": 12.2,
+          "plazo_max_meses": 180,
+          "financiamiento_max": 80,
+          "requisitos": [
+            "Socio 1 año",
+            "Entrada 20%",
+            "Avalúo",
+            "Pólizas"
+          ],
+          "ventajas": [
+            "Menor entrada que bancos",
+            "Proceso ágil",
+            "Tasas competitivas"
+          ]
+        }
+      },
+      "estado": "Activa",
+      "provincia": "Azuay",
+      "socios_aprox": 140000,
+      "supervision": "SEPS",
+      "website": "https://www.jardinazuayo.fin.ec"
+    },
+    {
+      "id": 3,
+      "nombre": "Policía Nacional",
+      "nombre_corto": "Policía Nacional",
+      "ruc": "1790866084001",
+      "activos_mill": 1523.701,
+      "patrimonio_mill": 136.1,
+      "segmento": 1,
+      "calificacion": "A",
+      "solvencia": 16.8,
+      "morosidad": 4.9,
+      "liquidez": 23.4,
+      "cobertura": 182,
+      "liquidez_inmediata": 19.8,
+      "captaciones_corto_plazo": 85.6,
+      "morosidad_consumo": 4.2,
+      "morosidad_microcredito": 8.1,
+      "morosidad_comercial": 3.8,
+      "cartera_improductiva": 4.9,
+      "roa": 1.2,
+      "roe": 10.8,
+      "eficiencia_operativa": 88.9,
+      "solvencia_estructural": 16.8,
+      "crecimiento_patrimonial_12m": 14.5,
+      "crecimiento_socios_12m": 5.2,
+      "diversificacion_productos": 6.8,
+      "productos_credito": {
+        "consumo_policial": {
+          "monto_min": 500,
+          "monto_max": 100000,
+          "tasa_min": 8.5,
+          "tasa_max": 12.8,
+          "plazo_max_meses": 72,
+          "requisitos": [
+            "Miembro activo Policía",
+            "Antigüedad",
+            "Descuento rol",
+            "Garante institucional"
+          ],
+          "ventajas": [
+            "Tasas preferenciales",
+            "Descuento automático",
+            "Montos altos",
+            "Sin garante externo"
+          ]
+        },
+        "consumo_general": {
+          "monto_min": 300,
+          "monto_max": 25000,
+          "tasa_min": 14.5,
+          "tasa_max": 18.2,
+          "plazo_max_meses": 48,
+          "requisitos": [
+            "Socio cooperativa",
+            "Ingresos comprobados",
+            "Referencias",
+            "Capacidad pago"
+          ],
+          "ventajas": [
+            "Proceso rápido",
+            "Requisitos flexibles",
+            "Atención personalizada"
+          ]
+        },
+        "emergencia": {
+          "monto_min": 200,
+          "monto_max": 5000,
+          "tasa_min": 15.8,
+          "tasa_max": 19.5,
+          "plazo_max_meses": 24,
+          "requisitos": [
+            "Socio activo",
+            "Justificación emergencia",
+            "Descuento automático"
+          ],
+          "ventajas": [
+            "Aprobación inmediata",
+            "Desembolso 24h",
+            "Sin papeleos"
+          ]
+        }
+      },
+      "estado": "Activa",
+      "provincia": "Pichincha",
+      "socios_aprox": 95000,
+      "supervision": "SEPS",
+      "website": "https://www.cooppolicianacional.fin.ec"
+    }
+  ]
+}

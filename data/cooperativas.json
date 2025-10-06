@@ -1,106 +1,145 @@
 {
-  "metadata": {
-    "last_updated": "2025-09-21",
-    "version": "2025-v2"
-  },
+  "last_updated": "2025-09-21",
+  "version": "2025-09",
+  "source": "Superintendencia de Economía Popular y Solidaria (SEPS)",
   "cooperativas": [
     {
       "id": 1,
-      "nombre": "Juventud Ecuadoriana",
-      "activos_mill": 3774,
-      "patrimonio_mill": 363,
-      "calificacion": "A+",
+      "nombre": "Juventud Ecuatoriana Progresista (JEP)",
+      "nombre_corto": "JEP",
+      "ruc": "0190115798001",
+      "activos_mill": 3774.836,
+      "patrimonio_mill": 363.4,
+      "segmento": 1,
       "solvencia": 18.2,
       "morosidad": 4.8,
       "liquidez": 24.1,
-      "roa": 1.85,
-      "roe": 14.2,
-      "productos_credito": {
-        "consumo": {
-          "monto_min": 300,
-          "monto_max": 50000,
-          "tasa_min": 12.5,
-          "tasa_max": 16.8,
-          "plazo_max": 60,
-          "requisitos": ["Socio activo", "Cédula", "Garantía personal"]
-        },
-        "microcredito": {
-          "monto_min": 500,
-          "monto_max": 20000,
-          "tasa_min": 15.2,
-          "tasa_max": 22.5,
-          "plazo_max": 36,
-          "requisitos": ["Actividad económica", "RUC", "Referencias"]
-        },
-        "credipyme": {
-          "monto_min": 1000,
-          "monto_max": 1000000,
-          "tasa_min": 11.33,
-          "tasa_max": 16.0,
-          "plazo_max": 48,
-          "requisitos": ["RUC activo", "Garantías"]
-        }
-      }
+      "cobertura": 195,
+      "estado": "Activa",
+      "provincia": "Pichincha",
+      "socios_aprox": 180000,
+      "supervision": "SEPS"
     },
     {
       "id": 2,
       "nombre": "Jardín Azuayo",
-      "activos_mill": 2107,
-      "patrimonio_mill": 275,
-      "calificacion": "A+",
+      "nombre_corto": "Jardín Azuayo",
+      "ruc": "0190155722001",
+      "activos_mill": 2107.233,
+      "patrimonio_mill": 275.1,
+      "segmento": 1,
       "solvencia": 19.1,
       "morosidad": 5.2,
       "liquidez": 22.8,
-      "roa": 2.1,
-      "roe": 15.8,
-      "productos_credito": {
-        "consumo": {
-          "monto_min": 500,
-          "monto_max": 40000,
-          "tasa_min": 13.2,
-          "tasa_max": 17.5,
-          "plazo_max": 48,
-          "requisitos": ["Socio", "Cédula", "Rol pagos"]
-        },
-        "agropecuario": {
-          "monto_min": 1000,
-          "monto_max": 50000,
-          "tasa_min": 11.8,
-          "tasa_max": 16.2,
-          "plazo_max": 60,
-          "requisitos": ["Actividad agropecuaria", "Aval"]
-        }
-      }
+      "cobertura": 188,
+      "estado": "Activa",
+      "provincia": "Azuay",
+      "socios_aprox": 140000,
+      "supervision": "SEPS"
     },
     {
       "id": 3,
       "nombre": "Policía Nacional",
-      "activos_mill": 1523,
-      "patrimonio_mill": 136,
-      "calificacion": "A",
+      "nombre_corto": "Policía Nacional",
+      "ruc": "1790866084001",
+      "activos_mill": 1523.701,
+      "patrimonio_mill": 136.1,
+      "segmento": 1,
       "solvencia": 16.8,
       "morosidad": 4.9,
       "liquidez": 23.4,
-      "roa": 1.2,
-      "roe": 10.8,
-      "productos_credito": {
-        "consumo_policial": {
-          "monto_min": 500,
-          "monto_max": 100000,
-          "tasa_min": 8.5,
-          "tasa_max": 12.8,
-          "plazo_max": 72,
-          "requisitos": ["Ser miembro", "Descuento rol"]
-        },
-        "consumo_general": {
-          "monto_min": 300,
-          "monto_max": 25000,
-          "tasa_min": 14.5,
-          "tasa_max": 18.0,
-          "plazo_max": 48,
-          "requisitos": ["Socio activo", "Ingresos"]
-        }
-      }
+      "cobertura": 182,
+      "estado": "Activa",
+      "provincia": "Pichincha",
+      "socios_aprox": 95000,
+      "supervision": "SEPS"
+    },
+    {
+      "id": 4,
+      "nombre": "Alianza del Valle",
+      "nombre_corto": "Alianza del Valle",
+      "ruc": "1790501469001",
+      "activos_mill": 1392.669,
+      "patrimonio_mill": 158.2,
+      "segmento": 1,
+      "solvencia": 17.5,
+      "morosidad": 5.6,
+      "liquidez": 21.9,
+      "cobertura": 175,
+      "estado": "Activa",
+      "provincia": "Cotopaxi",
+      "socios_aprox": 120000,
+      "supervision": "SEPS"
+    },
+    {
+      "id": 5,
+      "nombre": "29 de Octubre",
+      "nombre_corto": "29 de Octubre",
+      "ruc": "1790567699001",
+      "activos_mill": 1165.802,
+      "patrimonio_mill": 104.6,
+      "segmento": 1,
+      "solvencia": 16.2,
+      "morosidad": 6.1,
+      "liquidez": 20.3,
+      "cobertura": 168,
+      "estado": "Activa",
+      "provincia": "Pichincha",
+      "socios_aprox": 85000,
+      "supervision": "SEPS"
+    },
+    {
+      "id": 6,
+      "nombre": "Cooprogreso",
+      "nombre_corto": "Cooprogreso",
+      "ruc": "1790451801001",
+      "activos_mill": 874.372,
+      "patrimonio_mill": 95.0,
+      "segmento": 1,
+      "solvencia": 15.8,
+      "morosidad": 6.4,
+      "liquidez": 19.7,
+      "cobertura": 162,
+      "estado": "Activa",
+      "provincia": "Pichincha",
+      "socios_aprox": 75000,
+      "supervision": "SEPS"
+    },
+    {
+      "id": 7,
+      "nombre": "San Francisco",
+      "nombre_corto": "San Francisco",
+      "ruc": "1890003628001",
+      "activos_mill": 776.05,
+      "patrimonio_mill": 122.7,
+      "segmento": 1,
+      "solvencia": 18.9,
+      "morosidad": 5.3,
+      "liquidez": 22.1,
+      "cobertura": 185,
+      "estado": "Activa",
+      "provincia": "Tungurahua",
+      "socios_aprox": 68000,
+      "supervision": "SEPS"
+    },
+    {
+      "id": 8,
+      "nombre": "CREA",
+      "nombre_corto": "CREA",
+      "ruc": "0190158977001",
+      "activos_mill": 196.5,
+      "patrimonio_mill": 6.5,
+      "segmento": 1,
+      "solvencia": 3.36,
+      "morosidad": 18.2,
+      "liquidez": 8.1,
+      "cobertura": 45,
+      "estado": "En Liquidación",
+      "provincia": "Azuay",
+      "socios_aprox": 75211,
+      "fecha_liquidacion": "2025-07-29",
+      "razon_cierre": "Solvencia por debajo del mínimo normativo (3.36% vs 9% requerido)",
+      "supervision": "SEPS"
     }
   ]
 }

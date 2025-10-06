@@ -1,0 +1,286 @@
+{
+  "metadata": {
+    "last_updated": "2025-09-22",
+    "version": "2025-09-v2",
+    "source": "Superintendencia de Bancos del Ecuador",
+    "indicators_included": [
+      "Indicadores de Corto Plazo: Liquidez inmediata, Morosidad, Cobertura cartera",
+      "Indicadores de Largo Plazo: ROA, ROE, Solvencia estructural, CIR, Calce plazos",
+      "Módulo de Crédito: Tasas, plazos, requisitos por tipo de producto"
+    ]
+  },
+  "bancos": [
+    {
+      "id": 1,
+      "nombre": "Banco Pichincha",
+      "activos_mill": 19493,
+      "patrimonio_mill": 1965.1,
+      "calificacion": "AA+",
+      "solvencia": 14.2,
+      "morosidad": 2.8,
+      "liquidez": 32.1,
+      "cobertura": 215,
+      "liquidez_inmediata": 22.4,
+      "morosidad_consumo": 3.1,
+      "morosidad_comercial": 2.2,
+      "cartera_vencida": 2.8,
+      "depositos_corto_plazo": 68.2,
+      "roa": 0.79,
+      "roe": 11.2,
+      "cir": 52.3,
+      "solvencia_estructural": 14.2,
+      "calce_plazos": 8.5,
+      "diversificacion_fondeo": 7.8,
+      "crecimiento_cartera_12m": 12.5,
+      "productos_credito": {
+        "consumo": {
+          "monto_min": 1000,
+          "monto_max": 200000,
+          "tasa_min": 9.5,
+          "tasa_max": 12.8,
+          "plazo_max_meses": 60,
+          "requisitos": [
+            "Cédula",
+            "RUC/RISE",
+            "Rol de pagos",
+            "Cuenta corriente/ahorros"
+          ]
+        },
+        "hipotecario": {
+          "monto_min": 15000,
+          "monto_max": 400000,
+          "tasa_min": 7.2,
+          "tasa_max": 8.9,
+          "plazo_max_meses": 240,
+          "financiamiento_max": 80,
+          "requisitos": [
+            "Entrada 20%",
+            "Ingresos demostrables",
+            "Avalúo",
+            "Escrituras"
+          ]
+        },
+        "pyme": {
+          "monto_min": 5000,
+          "monto_max": 500000,
+          "tasa_min": 10.8,
+          "tasa_max": 14.2,
+          "plazo_max_meses": 48,
+          "requisitos": [
+            "RUC activo",
+            "Balances",
+            "Flujo de caja",
+            "Garantías"
+          ]
+        }
+      },
+      "estado": "Activo",
+      "supervision": "Superintendencia de Bancos",
+      "website": "https://www.pichincha.com"
+    },
+    {
+      "id": 2,
+      "nombre": "Banco del Pacífico",
+      "activos_mill": 8960,
+      "patrimonio_mill": 907.2,
+      "calificacion": "AA",
+      "solvencia": 13.8,
+      "morosidad": 3.1,
+      "liquidez": 28.9,
+      "cobertura": 198,
+      "liquidez_inmediata": 21.2,
+      "morosidad_consumo": 3.4,
+      "morosidad_comercial": 2.6,
+      "cartera_vencida": 3.1,
+      "depositos_corto_plazo": 71.5,
+      "roa": 1.76,
+      "roe": 17.42,
+      "cir": 48.7,
+      "solvencia_estructural": 13.8,
+      "calce_plazos": 9.1,
+      "diversificacion_fondeo": 8.2,
+      "crecimiento_cartera_12m": 15.8,
+      "productos_credito": {
+        "consumo": {
+          "monto_min": 500,
+          "monto_max": 150000,
+          "tasa_min": 9.8,
+          "tasa_max": 13.5,
+          "plazo_max_meses": 60,
+          "requisitos": [
+            "Cédula",
+            "Ingresos",
+            "Referencias",
+            "Cuenta en el banco"
+          ]
+        },
+        "hipotecario": {
+          "monto_min": 20000,
+          "monto_max": 350000,
+          "tasa_min": 7.8,
+          "tasa_max": 9.2,
+          "plazo_max_meses": 300,
+          "financiamiento_max": 75,
+          "requisitos": [
+            "Entrada 25%",
+            "Estabilidad laboral",
+            "Avalúo comercial",
+            "Seguro hipotecario"
+          ]
+        },
+        "pyme": {
+          "monto_min": 3000,
+          "monto_max": 300000,
+          "tasa_min": 11.2,
+          "tasa_max": 15.1,
+          "plazo_max_meses": 60,
+          "requisitos": [
+            "Experiencia comercial",
+            "Estados financieros",
+            "Plan de negocios",
+            "Garantías reales"
+          ]
+        }
+      },
+      "estado": "Activo",
+      "supervision": "Superintendencia de Bancos",
+      "website": "https://www.bancodelpacifico.com"
+    },
+    {
+      "id": 3,
+      "nombre": "Banco Guayaquil",
+      "activos_mill": 8728,
+      "patrimonio_mill": 768.3,
+      "calificacion": "AA",
+      "solvencia": 13.5,
+      "morosidad": 3.0,
+      "liquidez": 26.7,
+      "cobertura": 202,
+      "liquidez_inmediata": 20.8,
+      "morosidad_consumo": 3.2,
+      "morosidad_comercial": 2.5,
+      "cartera_vencida": 3.0,
+      "depositos_corto_plazo": 69.3,
+      "roa": 1.38,
+      "roe": 15.63,
+      "cir": 51.2,
+      "solvencia_estructural": 13.5,
+      "calce_plazos": 8.8,
+      "diversificacion_fondeo": 7.9,
+      "crecimiento_cartera_12m": 11.4,
+      "productos_credito": {
+        "consumo": {
+          "monto_min": 1000,
+          "monto_max": 180000,
+          "tasa_min": 10.2,
+          "tasa_max": 13.8,
+          "plazo_max_meses": 72,
+          "requisitos": [
+            "Documento identidad",
+            "Comprobante ingresos",
+            "Referencias comerciales",
+            "Cuenta activa"
+          ]
+        },
+        "hipotecario": {
+          "monto_min": 25000,
+          "monto_max": 450000,
+          "tasa_min": 7.5,
+          "tasa_max": 8.8,
+          "plazo_max_meses": 360,
+          "financiamiento_max": 85,
+          "requisitos": [
+            "Entrada 15%",
+            "Certificados ingresos",
+            "Avalúo actualizado",
+            "Póliza seguro"
+          ]
+        },
+        "pyme": {
+          "monto_min": 2000,
+          "monto_max": 400000,
+          "tasa_min": 11.5,
+          "tasa_max": 14.8,
+          "plazo_max_meses": 72,
+          "requisitos": [
+            "RUC vigente",
+            "Declaraciones SRI",
+            "Balances auditados",
+            "Experiencia sector"
+          ]
+        }
+      },
+      "estado": "Activo",
+      "supervision": "Superintendencia de Bancos",
+      "website": "https://www.bancoguayaquil.com"
+    },
+    {
+      "id": 4,
+      "nombre": "Produbanco",
+      "activos_mill": 8200,
+      "patrimonio_mill": 626.1,
+      "calificacion": "AA+",
+      "solvencia": 14.1,
+      "morosidad": 2.9,
+      "liquidez": 31.2,
+      "cobertura": 220,
+      "liquidez_inmediata": 23.1,
+      "morosidad_consumo": 3.0,
+      "morosidad_comercial": 2.4,
+      "cartera_vencida": 2.9,
+      "depositos_corto_plazo": 66.7,
+      "roa": 0.52,
+      "roe": 6.85,
+      "cir": 55.8,
+      "solvencia_estructural": 14.1,
+      "calce_plazos": 8.2,
+      "diversificacion_fondeo": 8.5,
+      "crecimiento_cartera_12m": 9.8,
+      "productos_credito": {
+        "consumo": {
+          "monto_min": 2500,
+          "monto_max": 300000,
+          "tasa_min": 10.5,
+          "tasa_max": 13.5,
+          "plazo_max_meses": 60,
+          "requisitos": [
+            "Cédula vigente",
+            "Estabilidad laboral",
+            "Ingresos demostrables",
+            "Buen historial crediticio"
+          ]
+        },
+        "hipotecario": {
+          "monto_min": 30000,
+          "monto_max": 500000,
+          "tasa_min": 7.5,
+          "tasa_max": 9.0,
+          "plazo_max_meses": 240,
+          "financiamiento_max": 80,
+          "requisitos": [
+            "Entrada 20%",
+            "Ingresos estables",
+            "Avalúo comercial",
+            "Escrituras globales"
+          ]
+        },
+        "pyme": {
+          "monto_min": 5000,
+          "monto_max": 1000000,
+          "tasa_min": 11.0,
+          "tasa_max": 14.0,
+          "plazo_max_meses": 48,
+          "requisitos": [
+            "RUC activo 2 años",
+            "Estados financieros",
+            "Flujos proyectados",
+            "Garantías suficientes"
+          ]
+        }
+      },
+      "estado": "Activo",
+      "supervision": "Superintendencia de Bancos",
+      "website": "https://www.produbanco.com.ec"
+    }
+  ]
+}

@@ -1,116 +1,39 @@
 {
-  "metadata": {
-    "last_updated": "2025-09-21",
-    "version": "2025-09-v2"
-  },
+  "last_updated": "2025-09-21",
+  "version": "2025-09",
+  "source": "Superintendencia de Bancos del Ecuador",
   "bancos": [
     {
       "id": 1,
-      "nombre": "Banco Pichicha",
+      "nombre": "Banco Pichincha",
       "activos_mill": 19493,
       "patrimonio_mill": 1965.1,
       "calificacion": "AA+",
+      "utilidades_mill": 150.2,
+      "roi_patrimonio": 7.64,
+      "roi_activos": 0.77,
       "solvencia": 14.2,
       "morosidad": 2.8,
       "liquidez": 32.1,
-      "roa": 0.79,
-      "roe": 11.2,
-      "cir": 52.3,
-      "productos_credito": {
-        "consumo": {
-          "monto_min": 1000,
-          "monto_max": 200000,
-          "tasa_min": 9.5,
-          "tasa_max": 12.8,
-          "plazo_max": 60,
-          "requisitos": [
-            "Cédula",
-            "RISE",
-            "Rol de pagos",
-            "Cuenta bancaria"
-          ]
-        },
-        "hipotecario": {
-          "monto_min": 15000,
-          "monto_max": 400000,
-          "tasa_min": 7.2,
-          "tasa_max": 8.9,
-          "plazo_max": 240,
-          "requisitos": [
-            "Entrada 20%",
-            "Ingresos demostrables",
-            "Avalúo",
-            "Escrituras"
-          ]
-        },
-        "pyme": {
-          "monto_min": 5000,
-          "monto_max": 1000000,
-          "tasa_min": 10.0,
-          "tasa_max": 14.5,
-          "plazo_max": 48,
-          "requisitos": [
-            "RUC activo",
-            "Balances",
-            "Flujo de caja",
-            "Garantías"
-          ]
-        }
-      }
+      "cobertura": 215,
+      "estado": "Activo",
+      "supervision": "Superintendencia de Bancos"
     },
     {
       "id": 2,
-      "nombre": "Banco del Pacifico",
+      "nombre": "Banco del Pacífico",
       "activos_mill": 8960,
       "patrimonio_mill": 907.2,
       "calificacion": "AA",
+      "utilidades_mill": 158.0,
+      "roi_patrimonio": 17.42,
+      "roi_activos": 1.76,
       "solvencia": 13.8,
       "morosidad": 3.1,
       "liquidez": 28.9,
-      "roa": 1.0,
-      "roe": 13.5,
-      "cir": 51.0,
-      "productos_credito": {
-        "consumo": {
-          "monto_min": 2000,
-          "monto_max": 150000,
-          "tasa_min": 10.0,
-          "tasa_max": 13.5,
-          "plazo_max": 60,
-          "requisitos": [
-            "Cédula",
-            "Rol de pagos",
-            "Referencias",
-            "Cuenta bancaria"
-          ]
-        },
-        "hipotecario": {
-          "monto_min": 20000,
-          "monto_max": 350000,
-          "tasa_min": 7.5,
-          "tasa_max": 9.0,
-          "plazo_max": 300,
-          "requisitos": [
-            "Entrada 25%",
-            "Avalúo",
-            "Seguro",
-            "Ingresos demostrables"
-          ]
-        },
-        "pyme": {
-          "monto_min": 3000,
-          "monto_max": 500000,
-          "tasa_min": 11.0,
-          "tasa_max": 14.3,
-          "plazo_max": 48,
-          "requisitos": [
-            "RUC activo",
-            "Plan de negocios",
-            "Garantías",
-            "Balances"
-          ]
-        }
-      }
+      "cobertura": 198,
+      "estado": "Activo",
+      "supervision": "Superintendencia de Bancos"
     },
     {
       "id": 3,
@@ -118,53 +41,15 @@
       "activos_mill": 8728,
       "patrimonio_mill": 768.3,
       "calificacion": "AA",
+      "utilidades_mill": 120.1,
+      "roi_patrimonio": 15.63,
+      "roi_activos": 1.38,
       "solvencia": 13.5,
       "morosidad": 3.0,
-      "liquidez": 27.0,
-      "roa": 0.9,
-      "roe": 12.5,
-      "cir": 53.0,
-      "productos_credito": {
-        "consumo": {
-          "monto_min": 1000,
-          "monto_max": 180000,
-          "tasa_min": 9.8,
-          "tasa_max": 13.0,
-          "plazo_max": 72,
-          "requisitos": [
-            "Cédula",
-            "Referencias",
-            "Rol de pagos",
-            "Cuenta bancaria"
-          ]
-        },
-        "hipotecario": {
-          "monto_min": 25000,
-          "monto_max": 450000,
-          "tasa_min": 7.0,
-          "tasa_max": 8.5,
-          "plazo_max": 360,
-          "requisitos": [
-            "Entrada 15%",
-            "Avalúo Comercial",
-            "Escrituras",
-            "Seguro"
-          ]
-        },
-        "pyme": {
-          "monto_min": 2000,
-          "monto_max": 400000,
-          "tasa_min": 11.5,
-          "tasa_max": 14.8,
-          "plazo_max": 72,
-          "requisitos": [
-            "RUC vigente",
-            "Balances Auditoría",
-            "Referencias",
-            "Garantías"
-          ]
-        }
-      }
+      "liquidez": 26.7,
+      "cobertura": 202,
+      "estado": "Activo",
+      "supervision": "Superintendencia de Bancos"
     },
     {
       "id": 4,
@@ -172,53 +57,111 @@
       "activos_mill": 8200,
       "patrimonio_mill": 626.1,
       "calificacion": "AA+",
+      "utilidades_mill": 42.9,
+      "roi_patrimonio": 6.85,
+      "roi_activos": 0.52,
       "solvencia": 14.1,
       "morosidad": 2.9,
-      "liquidez": 32.0,
-      "roa": 0.85,
-      "roe": 13.0,
-      "cir": 50.0,
-      "productos_credito": {
-        "consumo": {
-          "monto_min": 1500,
-          "monto_max": 200000,
-          "tasa_min": 9.5,
-          "tasa_max": 12.5,
-          "plazo_max": 60,
-          "requisitos": [
-            "Cédula vigente",
-            "Rol de pagos",
-            "Buen historial crediticio",
-            "Cuenta activa"
-          ]
-        },
-        "hipotecario": {
-          "monto_min": 30000,
-          "monto_max": 500000,
-          "tasa_min": 7.0,
-          "tasa_max": 8.5,
-          "plazo_max": 240,
-          "requisitos": [
-            "Entrada 20%",
-            "Avalúo actualizado",
-            "Seguro",
-            "Escrituras"
-          ]
-        },
-        "pyme": {
-          "monto_min": 5000,
-          "monto_max": 1000000,
-          "tasa_min": 10.0,
-          "tasa_max": 13.5,
-          "plazo_max": 48,
-          "requisitos": [
-            "RUC activo",
-            "Balances",
-            "Flujo de caja",
-            "Garantías"
-          ]
-        }
-      }
+      "liquidez": 31.2,
+      "cobertura": 220,
+      "estado": "Activo",
+      "supervision": "Superintendencia de Bancos"
+    },
+    {
+      "id": 5,
+      "nombre": "Banco Bolivariano",
+      "activos_mill": 5500,
+      "patrimonio_mill": 536.9,
+      "calificacion": "AA",
+      "utilidades_mill": 66.0,
+      "roi_patrimonio": 12.29,
+      "roi_activos": 1.2,
+      "solvencia": 13.9,
+      "morosidad": 3.4,
+      "liquidez": 24.8,
+      "cobertura": 192,
+      "estado": "Activo",
+      "supervision": "Superintendencia de Bancos"
+    },
+    {
+      "id": 6,
+      "nombre": "Banco Internacional",
+      "activos_mill": 5600,
+      "patrimonio_mill": 504.8,
+      "calificacion": "AA",
+      "utilidades_mill": 57.2,
+      "roi_patrimonio": 11.33,
+      "roi_activos": 1.02,
+      "solvencia": 13.6,
+      "morosidad": 3.2,
+      "liquidez": 27.4,
+      "cobertura": 188,
+      "estado": "Activo",
+      "supervision": "Superintendencia de Bancos"
+    },
+    {
+      "id": 7,
+      "nombre": "Diners Club",
+      "activos_mill": 3200,
+      "patrimonio_mill": 553.2,
+      "calificacion": "AA-",
+      "utilidades_mill": 30.3,
+      "roi_patrimonio": 5.48,
+      "roi_activos": 0.95,
+      "solvencia": 12.8,
+      "morosidad": 3.6,
+      "liquidez": 23.1,
+      "cobertura": 175,
+      "estado": "Activo",
+      "supervision": "Superintendencia de Bancos"
+    },
+    {
+      "id": 8,
+      "nombre": "Banco del Austro",
+      "activos_mill": 1850,
+      "patrimonio_mill": 263.2,
+      "calificacion": "AA-",
+      "utilidades_mill": 9.7,
+      "roi_patrimonio": 3.69,
+      "roi_activos": 0.52,
+      "solvencia": 12.5,
+      "morosidad": 3.8,
+      "liquidez": 25.6,
+      "cobertura": 182,
+      "estado": "Activo",
+      "supervision": "Superintendencia de Bancos"
+    },
+    {
+      "id": 9,
+      "nombre": "Banco Solidario",
+      "activos_mill": 1200,
+      "patrimonio_mill": 145.8,
+      "calificacion": "A+",
+      "utilidades_mill": 8.0,
+      "roi_patrimonio": 5.49,
+      "roi_activos": 0.67,
+      "solvencia": 11.2,
+      "morosidad": 4.1,
+      "liquidez": 22.3,
+      "cobertura": 165,
+      "estado": "Activo",
+      "supervision": "Superintendencia de Bancos"
+    },
+    {
+      "id": 10,
+      "nombre": "Banco General Rumiñahui",
+      "activos_mill": 850,
+      "patrimonio_mill": 119.3,
+      "calificacion": "A+",
+      "utilidades_mill": 11.5,
+      "roi_patrimonio": 9.64,
+      "roi_activos": 1.35,
+      "solvencia": 11.8,
+      "morosidad": 3.9,
+      "liquidez": 21.7,
+      "cobertura": 158,
+      "estado": "Activo",
+      "supervision": "Superintendencia de Bancos"
     }
   ]
 }
