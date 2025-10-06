@@ -1,12 +1,26 @@
 {
   "name": "bancos-cooperativas-ecuador",
   "version": "1.0.0",
-  "description": "Comparador financiero completo Ecuador - Indicadores avanzados y módulo crédito",
+  "description": "Comparador de seguridad financiera para bancos y cooperativas de Ecuador",
   "main": "index.html",
+  "keywords": ["ecuador", "bancos", "cooperativas", "finanzas", "seguridad", "inversiones"],
+  "author": "Tu Nombre",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TU_USUARIO/bancos-cooperativas-ecuador.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TU_USUARIO/bancos-cooperativas-ecuador/issues"
+  },
+  "homepage": "https://TU_USUARIO.github.io/bancos-cooperativas-ecuador",
   "scripts": {
     "update": "python scripts/update_data.py",
+    "test": "python -m pytest tests/",
     "serve": "python -m http.server 8000",
     "deploy": "gh-pages -d ."
   },
-  "license": "MIT"
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
+  }
 }

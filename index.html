@@ -16,6 +16,7 @@
             </div>
         </div>
     </header>
+
     <nav class="nav">
         <div class="container">
             <div class="nav__tabs">
@@ -29,21 +30,331 @@
             </div>
         </div>
     </nav>
+
     <main class="main">
         <div class="container">
-            <!-- Aquí va el contenido dinámico de cada pestaña, manejado por app.js -->
+            <!-- Dashboard Tab -->
             <section id="dashboard" class="tab-content active">
                 <h2>Dashboard del Sistema Financiero Ecuatoriano</h2>
-                <div id="dashboard-metrics"></div>
+                <div class="dashboard">
+                    <div class="dashboard__metrics">
+                        <div class="metric-card">
+                            <h3>Total Activos Bancos</h3>
+                            <div class="metric-value">$45,533 MM</div>
+                            <div class="metric-trend trend--positive">+12.5% anual</div>
+                        </div>
+                        <div class="metric-card">
+                            <h3>Total Activos Cooperativas</h3>
+                            <div class="metric-value">$7,405 MM</div>
+                            <div class="metric-trend trend--positive">+16.2% anual</div>
+                        </div>
+                        <div class="metric-card">
+                            <h3>Instituciones Supervisadas</h3>
+                            <div class="metric-value">157</div>
+                            <div class="metric-trend trend--neutral">Sistema estable</div>
+                        </div>
+                        <div class="metric-card">
+                            <h3>Seguro de Depósitos</h3>
+                            <div class="metric-value">$32,000</div>
+                            <div class="metric-trend trend--info">Por cuenta</div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard__charts">
+                        <div class="chart-container" style="position: relative; height: 300px;">
+                            <canvas id="sectorsChart"></canvas>
+                        </div>
+                        <div class="chart-container" style="position: relative; height: 300px;">
+                            <canvas id="indicatorsChart"></canvas>
+                        </div>
+                    </div>
+                </div>
             </section>
-            <section id="bancos" class="tab-content"></section>
-            <section id="cooperativas" class="tab-content"></section>
-            <section id="indicadores" class="tab-content"></section>
-            <section id="credito" class="tab-content"></section>
-            <section id="comparador" class="tab-content"></section>
-            <section id="alertas" class="tab-content"></section>
+
+            <!-- Bancos Tab -->
+            <section id="bancos" class="tab-content">
+                <div class="section-header">
+                    <h2>Sector Bancario</h2>
+                    <div class="section-controls">
+                        <select id="bancos-filter" class="form-control">
+                            <option value="all">Todos los indicadores</option>
+                            <option value="basicos">Indicadores básicos</option>
+                            <option value="rentabilidad">Rentabilidad</option>
+                            <option value="productos">Productos crédito</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="table-container">
+                    <table id="bancos-table" class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Banco</th>
+                                <th class="sortable" data-sort="activos_mill">Activos (MM)</th>
+                                <th class="sortable" data-sort="calificacion">Calificación</th>
+                                <th class="sortable" data-sort="solvencia">Solvencia %</th>
+                                <th class="sortable" data-sort="morosidad">Morosidad %</th>
+                                <th class="sortable" data-sort="roa">ROA %</th>
+                                <th class="sortable" data-sort="roe">ROE %</th>
+                                <th class="sortable" data-sort="liquidez">Liquidez %</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="bancos-tbody">
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Cooperativas Tab -->
+            <section id="cooperativas" class="tab-content">
+                <div class="section-header">
+                    <h2>Sector Cooperativo</h2>
+                    <div class="cooperative-advantages">
+                        <div class="advantage-badge">✓ Propiedad de socios</div>
+                        <div class="advantage-badge">✓ Tasas preferenciales</div>
+                        <div class="advantage-badge">✓ Enfoque social</div>
+                    </div>
+                </div>
+
+                <div class="table-container">
+                    <table id="cooperativas-table" class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Cooperativa</th>
+                                <th class="sortable" data-sort="activos_mill">Activos (MM)</th>
+                                <th class="sortable" data-sort="calificacion">Calificación</th>
+                                <th class="sortable" data-sort="solvencia">Solvencia %</th>
+                                <th class="sortable" data-sort="morosidad">Morosidad %</th>
+                                <th class="sortable" data-sort="roa">ROA %</th>
+                                <th class="sortable" data-sort="roe">ROE %</th>
+                                <th class="sortable" data-sort="socios_aprox">Socios</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cooperativas-tbody">
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Indicadores Avanzados Tab -->
+            <section id="indicadores" class="tab-content">
+                <h2>Indicadores Avanzados y Análisis</h2>
+                
+                <div class="indicators-filters">
+                    <button class="btn btn--secondary active" data-filter="all">Todos</button>
+                    <button class="btn btn--secondary" data-filter="corto">Corto Plazo</button>
+                    <button class="btn btn--secondary" data-filter="largo">Largo Plazo</button>
+                </div>
+
+                <div class="indicators-grid">
+                    <div class="indicators-table-container">
+                        <h3>Comparativa de Indicadores</h3>
+                        <table id="indicators-table" class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Institución</th>
+                                    <th>ROA</th>
+                                    <th>ROE</th>
+                                    <th>CIR</th>
+                                    <th>Solvencia</th>
+                                    <th>Crecimiento</th>
+                                    <th>Semáforo</th>
+                                </tr>
+                            </thead>
+                            <tbody id="indicators-tbody">
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="radar-chart-container">
+                        <h3>Análisis Radar</h3>
+                        <div class="chart-container" style="position: relative; height: 400px;">
+                            <canvas id="radarChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Módulo Crédito Tab -->
+            <section id="credito" class="tab-content">
+                <h2>Marketplace de Productos Crediticios</h2>
+                
+                <div class="credit-filters">
+                    <div class="form-group">
+                        <label class="form-label">Tipo de Crédito</label>
+                        <select id="credit-type" class="form-control">
+                            <option value="all">Todos los productos</option>
+                            <option value="consumo">Consumo</option>
+                            <option value="hipotecario">Hipotecario</option>
+                            <option value="pyme">PYME</option>
+                            <option value="microcredito">Microcrédito</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Monto Deseado ($)</label>
+                        <input type="number" id="credit-amount" class="form-control" placeholder="Ej: 10000">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Plazo (meses)</label>
+                        <input type="number" id="credit-term" class="form-control" placeholder="Ej: 24">
+                    </div>
+                    <button id="filter-credits" class="btn btn--primary">Filtrar Productos</button>
+                </div>
+
+                <div class="credit-calculator">
+                    <h3>Calculadora de Cuotas</h3>
+                    <div class="calculator-result" id="calculator-result">
+                        Selecciona un producto para calcular la cuota mensual
+                    </div>
+                </div>
+
+                <div class="credit-products" id="credit-products">
+                </div>
+
+                <div class="cooperative-advantages-section">
+                    <h3>Ventajas Cooperativas vs Bancos</h3>
+                    <div class="advantages-comparison">
+                        <div class="advantage-item">
+                            <h4>Cooperativas</h4>
+                            <ul>
+                                <li>Tasas más bajas para socios</li>
+                                <li>Proceso más personalizado</li>
+                                <li>Menos requisitos documentales</li>
+                                <li>Enfoque social y comunitario</li>
+                            </ul>
+                        </div>
+                        <div class="advantage-item">
+                            <h4>Bancos</h4>
+                            <ul>
+                                <li>Mayor capacidad crediticia</li>
+                                <li>Tecnología más avanzada</li>
+                                <li>Red más amplia de oficinas</li>
+                                <li>Productos más diversificados</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Comparador Tab -->
+            <section id="comparador" class="tab-content">
+                <h2>Comparador Integral</h2>
+                
+                <div class="comparator-controls">
+                    <div class="institution-selectors">
+                        <div class="selector-group">
+                            <label class="form-label">Institución 1</label>
+                            <select id="compare-1" class="form-control">
+                                <option value="">Seleccionar...</option>
+                            </select>
+                        </div>
+                        <div class="selector-group">
+                            <label class="form-label">Institución 2</label>
+                            <select id="compare-2" class="form-control">
+                                <option value="">Seleccionar...</option>
+                            </select>
+                        </div>
+                        <div class="selector-group">
+                            <label class="form-label">Institución 3</label>
+                            <select id="compare-3" class="form-control">
+                                <option value="">Seleccionar...</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button id="generate-comparison" class="btn btn--primary">Generar Comparación</button>
+                </div>
+
+                <div class="comparison-result" id="comparison-result">
+                </div>
+
+                <div class="recommendations" id="recommendations">
+                </div>
+            </section>
+
+            <!-- Alertas CREA Tab -->
+            <section id="alertas" class="tab-content">
+                <h2>Caso CREA: Lecciones Aprendidas</h2>
+                
+                <div class="alert-card alert-card--danger">
+                    <h3>⚠️ Alerta: Liquidación Cooperativa CREA</h3>
+                    <div class="alert-details">
+                        <div class="alert-item">
+                            <strong>Fecha de liquidación:</strong> 29 de julio, 2025
+                        </div>
+                        <div class="alert-item">
+                            <strong>Solvencia final:</strong> 3.36%
+                        </div>
+                        <div class="alert-item">
+                            <strong>Pérdidas estimadas:</strong> $189.5 millones
+                        </div>
+                        <div class="alert-item">
+                            <strong>Socios afectados:</strong> 75,211 personas
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lessons-learned">
+                    <h3>Lecciones Aprendidas</h3>
+                    <div class="lessons-grid">
+                        <div class="lesson-card">
+                            <div class="lesson-icon">📊</div>
+                            <h4>Monitorear solvencia mensual</h4>
+                            <p>Revisar indicadores de solvencia regularmente y evitar instituciones con tendencia decreciente.</p>
+                        </div>
+                        <div class="lesson-card">
+                            <div class="lesson-icon">🔄</div>
+                            <h4>Diversificar siempre</h4>
+                            <p>No concentrar todos los ahorros en una sola institución financiera.</p>
+                        </div>
+                        <div class="lesson-card">
+                            <div class="lesson-icon">💰</div>
+                            <h4>Límite de $32,000</h4>
+                            <p>Mantener máximo $32,000 por institución para protección del seguro de depósitos.</p>
+                        </div>
+                        <div class="lesson-card">
+                            <div class="lesson-icon">⭐</div>
+                            <h4>Preferir AA+/AA</h4>
+                            <p>Seleccionar instituciones con calificaciones de riesgo altas y reconocidas.</p>
+                        </div>
+                        <div class="lesson-card">
+                            <div class="lesson-icon">📋</div>
+                            <h4>Revisar estados financieros</h4>
+                            <p>Analizar periódicamente los reportes financieros públicos disponibles.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="risk-simulator">
+                    <h3>Simulador de Diversificación</h3>
+                    <div class="simulator-controls">
+                        <div class="form-group">
+                            <label class="form-label">Monto total a invertir ($)</label>
+                            <input type="number" id="total-amount" class="form-control" placeholder="100000">
+                        </div>
+                        <button id="simulate-diversification" class="btn btn--primary">Simular Diversificación</button>
+                    </div>
+                    <div class="simulation-result" id="simulation-result">
+                    </div>
+                </div>
+            </section>
         </div>
     </main>
+
+    <!-- Modal for institution details -->
+    <div id="institution-modal" class="modal hidden">
+        <div class="modal__backdrop"></div>
+        <div class="modal__content">
+            <div class="modal__header">
+                <h3 id="modal-title">Detalles de la Institución</h3>
+                <button id="modal-close" class="modal__close">&times;</button>
+            </div>
+            <div class="modal__body" id="modal-body">
+            </div>
+        </div>
+    </div>
+
     <script src="app.js"></script>
 </body>
 </html>
