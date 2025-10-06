@@ -4,7 +4,7 @@
   "description": "Comparador financiero completo Ecuador - Indicadores avanzados y módulo crédito",
   "main": "index.html",
   "scripts": {
-    "update": "python scripts/update_data_complete.py",
+    "update": "python scripts/update_data.py",
     "serve": "python -m http.server 8000",
     "deploy": "gh-pages -d ."
   },
