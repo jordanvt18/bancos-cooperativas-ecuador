@@ -1,0 +1,35 @@
+name: Actualización mensual progresiva
+
+on:
+  schedule:
+    - cron: '0 12 15 * *'
+  push:
+    branches:
+      - main
+    paths:
+      - 'data/**'
+      - 'scripts/**'
+      - '.github/**'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+      - name: Install dependencies
+        run: |
+          pip install -r scripts/requirements.txt
+      - name: Run Data Update
+        run: python scripts/update_data.py
+      - name: Commit changes
+        run: |
+          git add data/
+          git commit -m "Auto: Actualización mensual datos"
+          git push
+        continue-on-error: true
