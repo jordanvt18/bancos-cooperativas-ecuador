@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comparador Financiero Ecuador 2025</title>
+    <title>Comparador Financiero Ecuador 2026</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <header class="header">
         <div class="container">
-            <h1 class="header__title">Comparador Financiero Ecuador 2025</h1>
+            <h1 class="header__title">Comparador Financiero Ecuador 2026</h1>
             <div class="header__controls">
-                <button id="theme-toggle" class="btn btn--outline btn--sm">🌙 Modo Oscuro</button>
+                <button id="theme-toggle" class="btn btn--outline btn--sm">Modo Oscuro</button>
             </div>
         </div>
     </header>
@@ -24,7 +24,7 @@
                 <button class="nav__tab" data-tab="bancos">Bancos</button>
                 <button class="nav__tab" data-tab="cooperativas">Cooperativas</button>
                 <button class="nav__tab" data-tab="indicadores">Indicadores Avanzados</button>
-                <button class="nav__tab" data-tab="credito">Módulo Crédito</button>
+                <button class="nav__tab" data-tab="credito">Modulo Credito</button>
                 <button class="nav__tab" data-tab="comparador">Comparador</button>
                 <button class="nav__tab" data-tab="alertas">Alertas CREA</button>
             </div>
@@ -40,13 +40,13 @@
                     <div class="dashboard__metrics">
                         <div class="metric-card">
                             <h3>Total Activos Bancos</h3>
-                            <div class="metric-value">$45,533 MM</div>
-                            <div class="metric-trend trend--positive">+12.5% anual</div>
+                            <div class="metric-value">$49,102 MM</div>
+                            <div class="metric-trend trend--positive">+8.2% anual (corte 2026-03)</div>
                         </div>
                         <div class="metric-card">
                             <h3>Total Activos Cooperativas</h3>
-                            <div class="metric-value">$7,405 MM</div>
-                            <div class="metric-trend trend--positive">+16.2% anual</div>
+                            <div class="metric-value">$8,102 MM</div>
+                            <div class="metric-trend trend--positive">+9.4% anual (corte 2026-03)</div>
                         </div>
                         <div class="metric-card">
                             <h3>Instituciones Supervisadas</h3>
@@ -54,7 +54,7 @@
                             <div class="metric-trend trend--neutral">Sistema estable</div>
                         </div>
                         <div class="metric-card">
-                            <h3>Seguro de Depósitos</h3>
+                            <h3>Seguro de Depositos</h3>
                             <div class="metric-value">$32,000</div>
                             <div class="metric-trend trend--info">Por cuenta</div>
                         </div>
@@ -78,9 +78,9 @@
                     <div class="section-controls">
                         <select id="bancos-filter" class="form-control">
                             <option value="all">Todos los indicadores</option>
-                            <option value="basicos">Indicadores básicos</option>
+                            <option value="basicos">Indicadores basicos</option>
                             <option value="rentabilidad">Rentabilidad</option>
-                            <option value="productos">Productos crédito</option>
+                            <option value="productos">Productos credito</option>
                         </select>
                     </div>
                 </div>
@@ -91,7 +91,7 @@
                             <tr>
                                 <th>Banco</th>
                                 <th class="sortable" data-sort="activos_mill">Activos (MM)</th>
-                                <th class="sortable" data-sort="calificacion">Calificación</th>
+                                <th class="sortable" data-sort="calificacion">Calificacion</th>
                                 <th class="sortable" data-sort="solvencia">Solvencia %</th>
                                 <th class="sortable" data-sort="morosidad">Morosidad %</th>
                                 <th class="sortable" data-sort="roa">ROA %</th>
@@ -111,9 +111,9 @@
                 <div class="section-header">
                     <h2>Sector Cooperativo</h2>
                     <div class="cooperative-advantages">
-                        <div class="advantage-badge">✓ Propiedad de socios</div>
-                        <div class="advantage-badge">✓ Tasas preferenciales</div>
-                        <div class="advantage-badge">✓ Enfoque social</div>
+                        <div class="advantage-badge">OK Propiedad de socios</div>
+                        <div class="advantage-badge">OK Tasas preferenciales</div>
+                        <div class="advantage-badge">OK Enfoque social</div>
                     </div>
                 </div>
 
@@ -123,7 +123,7 @@
                             <tr>
                                 <th>Cooperativa</th>
                                 <th class="sortable" data-sort="activos_mill">Activos (MM)</th>
-                                <th class="sortable" data-sort="calificacion">Calificación</th>
+                                <th class="sortable" data-sort="calificacion">Calificacion</th>
                                 <th class="sortable" data-sort="solvencia">Solvencia %</th>
                                 <th class="sortable" data-sort="morosidad">Morosidad %</th>
                                 <th class="sortable" data-sort="roa">ROA %</th>
@@ -140,7 +140,7 @@
 
             <!-- Indicadores Avanzados Tab -->
             <section id="indicadores" class="tab-content">
-                <h2>Indicadores Avanzados y Análisis</h2>
+                <h2>Indicadores Avanzados y Analisis</h2>
                 
                 <div class="indicators-filters">
                     <button class="btn btn--secondary active" data-filter="all">Todos</button>
@@ -154,13 +154,13 @@
                         <table id="indicators-table" class="data-table">
                             <thead>
                                 <tr>
-                                    <th>Institución</th>
+                                    <th>Institucion</th>
                                     <th>ROA</th>
                                     <th>ROE</th>
                                     <th>CIR</th>
                                     <th>Solvencia</th>
                                     <th>Crecimiento</th>
-                                    <th>Semáforo</th>
+                                    <th>Semaforo</th>
                                 </tr>
                             </thead>
                             <tbody id="indicators-tbody">
@@ -169,7 +169,7 @@
                     </div>
 
                     <div class="radar-chart-container">
-                        <h3>Análisis Radar</h3>
+                        <h3>Analisis Radar</h3>
                         <div class="chart-container" style="position: relative; height: 400px;">
                             <canvas id="radarChart"></canvas>
                         </div>
@@ -177,19 +177,19 @@
                 </div>
             </section>
 
-            <!-- Módulo Crédito Tab -->
+            <!-- Modulo Credito Tab -->
             <section id="credito" class="tab-content">
                 <h2>Marketplace de Productos Crediticios</h2>
                 
                 <div class="credit-filters">
                     <div class="form-group">
-                        <label class="form-label">Tipo de Crédito</label>
+                        <label class="form-label">Tipo de Credito</label>
                         <select id="credit-type" class="form-control">
                             <option value="all">Todos los productos</option>
                             <option value="consumo">Consumo</option>
                             <option value="hipotecario">Hipotecario</option>
                             <option value="pyme">PYME</option>
-                            <option value="microcredito">Microcrédito</option>
+                            <option value="microcredito">Microcredito</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -219,8 +219,8 @@
                         <div class="advantage-item">
                             <h4>Cooperativas</h4>
                             <ul>
-                                <li>Tasas más bajas para socios</li>
-                                <li>Proceso más personalizado</li>
+                                <li>Tasas mas bajas para socios</li>
+                                <li>Proceso mas personalizado</li>
                                 <li>Menos requisitos documentales</li>
                                 <li>Enfoque social y comunitario</li>
                             </ul>
@@ -229,9 +229,9 @@
                             <h4>Bancos</h4>
                             <ul>
                                 <li>Mayor capacidad crediticia</li>
-                                <li>Tecnología más avanzada</li>
-                                <li>Red más amplia de oficinas</li>
-                                <li>Productos más diversificados</li>
+                                <li>Tecnologia mas avanzada</li>
+                                <li>Red mas amplia de oficinas</li>
+                                <li>Productos mas diversificados</li>
                             </ul>
                         </div>
                     </div>
@@ -245,25 +245,25 @@
                 <div class="comparator-controls">
                     <div class="institution-selectors">
                         <div class="selector-group">
-                            <label class="form-label">Institución 1</label>
+                            <label class="form-label">Institucion 1</label>
                             <select id="compare-1" class="form-control">
                                 <option value="">Seleccionar...</option>
                             </select>
                         </div>
                         <div class="selector-group">
-                            <label class="form-label">Institución 2</label>
+                            <label class="form-label">Institucion 2</label>
                             <select id="compare-2" class="form-control">
                                 <option value="">Seleccionar...</option>
                             </select>
                         </div>
                         <div class="selector-group">
-                            <label class="form-label">Institución 3</label>
+                            <label class="form-label">Institucion 3</label>
                             <select id="compare-3" class="form-control">
                                 <option value="">Seleccionar...</option>
                             </select>
                         </div>
                     </div>
-                    <button id="generate-comparison" class="btn btn--primary">Generar Comparación</button>
+                    <button id="generate-comparison" class="btn btn--primary">Generar Comparacion</button>
                 </div>
 
                 <div class="comparison-result" id="comparison-result">
@@ -278,16 +278,16 @@
                 <h2>Caso CREA: Lecciones Aprendidas</h2>
                 
                 <div class="alert-card alert-card--danger">
-                    <h3>⚠️ Alerta: Liquidación Cooperativa CREA</h3>
+                    <h3>Alerta: Liquidacion Cooperativa CREA</h3>
                     <div class="alert-details">
                         <div class="alert-item">
-                            <strong>Fecha de liquidación:</strong> 29 de julio, 2025
+                            <strong>Fecha de liquidacion:</strong> 29 de julio, 2025
                         </div>
                         <div class="alert-item">
                             <strong>Solvencia final:</strong> 3.36%
                         </div>
                         <div class="alert-item">
-                            <strong>Pérdidas estimadas:</strong> $189.5 millones
+                            <strong>Perdidas estimadas:</strong> $189.5 millones
                         </div>
                         <div class="alert-item">
                             <strong>Socios afectados:</strong> 75,211 personas
@@ -299,41 +299,41 @@
                     <h3>Lecciones Aprendidas</h3>
                     <div class="lessons-grid">
                         <div class="lesson-card">
-                            <div class="lesson-icon">📊</div>
+                            <div class="lesson-icon">Riesgo</div>
                             <h4>Monitorear solvencia mensual</h4>
                             <p>Revisar indicadores de solvencia regularmente y evitar instituciones con tendencia decreciente.</p>
                         </div>
                         <div class="lesson-card">
-                            <div class="lesson-icon">🔄</div>
+                            <div class="lesson-icon">Diversifica</div>
                             <h4>Diversificar siempre</h4>
-                            <p>No concentrar todos los ahorros en una sola institución financiera.</p>
+                            <p>No concentrar todos los ahorros en una sola institucion financiera.</p>
                         </div>
                         <div class="lesson-card">
-                            <div class="lesson-icon">💰</div>
-                            <h4>Límite de $32,000</h4>
-                            <p>Mantener máximo $32,000 por institución para protección del seguro de depósitos.</p>
+                            <div class="lesson-icon">Limite</div>
+                            <h4>Limite de $32,000</h4>
+                            <p>Mantener maximo $32,000 por institucion para proteccion del seguro de depositos.</p>
                         </div>
                         <div class="lesson-card">
-                            <div class="lesson-icon">⭐</div>
+                            <div class="lesson-icon">Rating</div>
                             <h4>Preferir AA+/AA</h4>
                             <p>Seleccionar instituciones con calificaciones de riesgo altas y reconocidas.</p>
                         </div>
                         <div class="lesson-card">
-                            <div class="lesson-icon">📋</div>
+                            <div class="lesson-icon">Revision</div>
                             <h4>Revisar estados financieros</h4>
-                            <p>Analizar periódicamente los reportes financieros públicos disponibles.</p>
+                            <p>Analizar periodicamente los reportes financieros publicos disponibles.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="risk-simulator">
-                    <h3>Simulador de Diversificación</h3>
+                    <h3>Simulador de Diversificacion</h3>
                     <div class="simulator-controls">
                         <div class="form-group">
                             <label class="form-label">Monto total a invertir ($)</label>
                             <input type="number" id="total-amount" class="form-control" placeholder="100000">
                         </div>
-                        <button id="simulate-diversification" class="btn btn--primary">Simular Diversificación</button>
+                        <button id="simulate-diversification" class="btn btn--primary">Simular Diversificacion</button>
                     </div>
                     <div class="simulation-result" id="simulation-result">
                     </div>
@@ -347,7 +347,7 @@
         <div class="modal__backdrop"></div>
         <div class="modal__content">
             <div class="modal__header">
-                <h3 id="modal-title">Detalles de la Institución</h3>
+                <h3 id="modal-title">Detalles de la Institucion</h3>
                 <button id="modal-close" class="modal__close">&times;</button>
             </div>
             <div class="modal__body" id="modal-body">
@@ -358,3 +358,5 @@
     <script src="app.js"></script>
 </body>
 </html>
+
+
