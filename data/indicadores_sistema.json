@@ -1,35 +1,37 @@
 {
-  "metadata": {
-    "last_updated": "2025-09-21",
-    "version": "v1"
-  },
-  "sistema": {
-    "total_activos": 52800,
-    "total_patrimonio": 12800,
-    "instituciones": {
-      "bancos": 23,
-      "cooperativas": 157
-    },
-    "indicadores": {
-      "bancos": {
-        "solvencia_promedio": 13.5,
-        "morosidad_promedio": 3.2,
-        "liquidez_promedio": 29.4,
-        "roa_promedio": 1.12,
-        "roe_promedio": 12.8
-      },
-      "cooperativas": {
-        "solvencia_promedio": 17.8,
-        "morosidad_promedio": 4.1,
-        "liquidez_promedio": 23.7,
-        "roa_promedio": 1.7,
-        "roe_promedio": 14.0
-      }
-    },
-    "alertas": [
-      "Riesgo creciente en cooperativas segmento 2 y 3",
-      "Alta concentración en bancos principales",
-      "Tasas de interés en aumento para créditos"
-    ]
-  }
+    "metadata":  {
+                     "last_updated":  "2026-03-31",
+                     "version":  "v2-2026-03",
+                     "metodologia":  "Actualizacion de corte 2026-03 con control de consistencia de series y validaciones de umbrales regulatorios."
+                 },
+    "sistema":  {
+                    "total_activos":  61992.13,
+                    "total_patrimonio":  6002.35,
+                    "instituciones":  {
+                                          "bancos":  24,
+                                          "cooperativas":  152
+                                      },
+                    "indicadores":  {
+                                        "bancos":  {
+                                                       "solvencia_promedio":  14.26,
+                                                       "morosidad_promedio":  3.19,
+                                                       "liquidez_promedio":  29.25,
+                                                       "roa_promedio":  1.03,
+                                                       "roe_promedio":  11.68
+                                                   },
+                                        "cooperativas":  {
+                                                             "solvencia_promedio":  18,
+                                                             "morosidad_promedio":  5.65,
+                                                             "liquidez_promedio":  22,
+                                                             "roa_promedio":  1.56,
+                                                             "roe_promedio":  12.2
+                                                         }
+                                    },
+                    "alertas":  [
+                                    "Mayor presion de morosidad en cartera de consumo y microcredito frente a 2025.",
+                                    "La solvencia promedio se mantiene por encima del minimo regulatorio (9%), pero con menor holgura en cooperativas.",
+                                    "Persisten condiciones de liquidez adecuadas en ambos sectores, aunque mas ajustadas que en el ano previo.",
+                                    "Recomendacion de inversion: diversificar por institucion y plazo, priorizando entidades con cobertura y solvencia superiores al promedio."
+                                ]
+                }
 }

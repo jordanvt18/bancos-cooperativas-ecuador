@@ -1,135 +1,63 @@
-# Comparador Financiero Ecuador 2025 🏦
+# Comparador Financiero Ecuador 2026
 
-Una aplicación web para evaluar la seguridad de bancos y cooperativas de ahorro y crédito en Ecuador, con actualizaciones mensuales automáticas.
+Aplicacion web para comparar bancos y cooperativas de Ecuador con enfoque en inversion conservadora y renta fija.
 
-## 🎯 Objetivo
+## Objetivo
 
-Ayudar a la ciudadanía ecuatoriana a tomar decisiones informadas sobre dónde invertir sus ahorros de manera segura, aprendiendo del caso de la cooperativa CREA y otros precedentes.
+Entregar una alternativa informada para evaluar instituciones financieras, con foco en:
+- Solvencia
+- Morosidad
+- Liquidez
+- Cobertura
+- Rentabilidad (ROA y ROE)
 
-## ✨ Características
+## Datos y alcance
 
-- 📊 **Ranking interactivo** de bancos y cooperativas
-- 🔍 **Comparador directo** entre instituciones
-- 📈 **Dashboard de indicadores** financieros en tiempo real  
-- ⚠️ **Alertas de riesgo** y lecciones del caso CREA
-- 🧮 **Calculadora de diversificación** de inversiones
-- 📱 **Diseño responsive** optimizado para móviles
-- 🔄 **Actualizaciones automáticas** mensuales
+- Corte actualizado: `2026-03-31`
+- Archivos principales:
+  - `data/bancos.json`
+  - `data/cooperativas.json`
+  - `data/bancos_expandidos.json`
+  - `data/cooperativas_expandidas.json`
+  - `data/indicadores_sistema.json`
+- Frontend sincronizado con el mismo corte en `app.js` e `index.html`
 
-## 🚀 Ver la Aplicación
+## Funcionalidades
 
-👉 **[Abrir Comparador Financiero](https://jordanvt18.github.io/bancos-cooperativas-ecuador)**
+- Dashboard de indicadores agregados del sistema
+- Tablas comparativas de bancos y cooperativas
+- Modulo de credito con filtros por tipo, monto y plazo
+- Comparador de instituciones con recomendaciones
+- Simulador de diversificacion con referencia de cobertura COSEDE
 
-## 📊 Datos Incluidos
+## Validacion de datos
 
-### Bancos Privados (Top 10)
-- Banco Pichincha ($19,493 millones - AA+)
-- Banco del Pacífico ($8,960 millones - AA)  
-- Banco Guayaquil ($8,728 millones - AA)
-- Produbanco ($8,200 millones - AA+)
-- Y más...
+La actualizacion incluye validaciones de consistencia interna:
+- Estructura minima por institucion
+- Umbrales regulatorios basicos (solvencia minima y morosidad)
+- Coherencia entre archivos simplificados y expandidos
+- Coherencia entre agregados del sistema y datos por institucion
 
-### Cooperativas Segmento 1 (Top 10)
-- JEP - Juventud Ecuatoriana Progresista ($3,775 millones)
-- Jardín Azuayo ($2,107 millones)
-- Policía Nacional ($1,524 millones)
-- Alianza del Valle ($1,393 millones)
-- Y más...
+## Seguridad y buenas practicas
 
-### Indicadores Monitoreados
-- **Solvencia**: Capacidad para cubrir riesgos (mín. 9%)
-- **Morosidad**: Porcentaje de cartera vencida
-- **Liquidez**: Disponibilidad de fondos
-- **Cobertura**: Protección ante cartera improductiva
-- **Calificaciones**: Evaluaciones externas de riesgo
+- No se publican API keys ni secretos en el repositorio.
+- El proyecto usa `.gitignore` para excluir entornos locales, archivos temporales y configuraciones sensibles.
+- Si se requiere integracion con APIs externas, usar variables de entorno y secretos del proveedor de CI/CD.
 
-## 🛡️ Medidas de Seguridad
+## Ejecucion local
 
-### ✅ Recomendaciones Clave
-- **Límite por institución**: Máximo $32,000 USD (cobertura COSEDE)
-- **Diversificar**: Distribuir entre múltiples instituciones
-- **Preferir AA+/AA**: Calificaciones de riesgo altas
-- **Monitorear**: Revisar indicadores mensualmente
+Abrir `index.html` en navegador o publicar con GitHub Pages.
 
-### 🚨 Señales de Alerta (Caso CREA)
-- Solvencia por debajo del 9% normativo
-- Morosidad sostenida alta
-- Falta de cobertura de cartera
-- Patrimonio técnico deteriorado
+## Nota metodologica
 
-## 🔄 Actualizaciones Automáticas
+Este repositorio usa una serie de datos mantenida dentro del proyecto.
+Para validacion regulatoria formal o decisiones de inversion definitivas, contrastar siempre con publicaciones oficiales de Superintendencia de Bancos, SEPS y BCE.
 
-Los datos se actualizan automáticamente el **día 15 de cada mes** desde:
+## Aviso legal
 
-- **Superintendencia de Bancos**: Indicadores de banca privada
-- **SEPS**: Estados financieros de cooperativas  
-- **Banco Central**: Tasas e indicadores monetarios
+Comparto este contenido con fines exclusivamente informativos y educativos.
+No doy recomendacion, asesoria ni invitacion a invertir en bancos o cooperativas.
 
-## 🛠️ Tecnologías
+## Licencia
 
-- **Frontend**: HTML5, CSS3, JavaScript Vanilla
-- **Charts**: Chart.js para visualizaciones
-- **Hosting**: GitHub Pages (gratuito)
-- **Updates**: GitHub Actions (automático)
-- **Data**: JSON estático (rápido y confiable)
-
-## 📁 Estructura del Proyecto
-
-```
-├── index.html              # Aplicación principal
-├── style.css               # Estilos minimalistas
-├── app.js                  # Lógica JavaScript
-├── data/
-│   ├── bancos.json        # Datos actuales bancos
-│   ├── cooperativas.json  # Datos actuales cooperativas
-│   └── monthly/           # Historial mensual
-├── scripts/
-│   └── update_data.py     # Script de actualización
-├── .github/workflows/
-│   └── update-data.yml    # GitHub Actions
-└── assets/
-    └── charts/            # Gráficos e imágenes
-```
-
-## 🚦 Cómo Usar
-
-1. **Explorar Rankings**: Ve los bancos y cooperativas ordenados por tamaño
-2. **Comparar**: Selecciona 2 instituciones para análisis detallado
-3. **Monitorear**: Revisa indicadores de salud financiera
-4. **Alertas CREA**: Aprende del caso y cómo evitar riesgos
-5. **Diversificar**: Usa la calculadora de distribución de riesgo
-
-## 🎯 Casos de Uso
-
-- **Inversionistas**: Evaluar dónde colocar ahorros de forma segura
-- **Estudiantes**: Aprender sobre el sistema financiero ecuatoriano  
-- **Analistas**: Monitorear la salud del sector financiero
-- **Ciudadanos**: Proteger patrimonio familiar con decisiones informadas
-
-## 🤝 Contribuir
-
-1. Fork el repositorio
-2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
-3. Commit cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
-
-## 📄 Licencia
-
-Proyecto bajo licencia MIT - ver archivo [LICENSE](LICENSE) para detalles.
-
-## 📞 Contacto
-
-- Crear un [Issue](../../issues) para reportar bugs
-- [Discussions](../../discussions) para ideas y sugerencias
-- Email: 
-
-## ⭐ Apoyar el Proyecto
-
-Si te resulta útil, ¡dale una estrella ⭐ al repositorio!
-
----
-
-**📅 Última actualización**: Septiembre 2025  
-**🔍 Fuentes**: Superintendencia de Bancos, SEPS, Banco Central del Ecuador  
-**⚖️ Disclaimer**: Esta herramienta es informativa. Las decisiones de inversión son responsabilidad del usuario.
+MIT
