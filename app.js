@@ -1,3 +1,5 @@
+'use strict';
+
 // Data from JSON
 const appData = {
     "bancos":  [
@@ -1235,6 +1237,9 @@ function generateRecommendations(institutions) {
             <strong>Recomendacion General:</strong> Considera diversificar entre diferentes instituciones 
             y sectores para reducir el riesgo de concentracion.
         </div>
+        <div class="recommendation-item">
+            <strong>Aviso:</strong> Comparto este contenido con fines informativos y educativos. No doy recomendaciones de inversion.
+        </div>
     `;
 }
 
@@ -1268,7 +1273,7 @@ function simulateDiversification() {
         <p><strong>Instituciones recomendadas:</strong> ${recommendedInstitutions}</p>
         <p><strong>Monto por institucion:</strong> $${amountPerInstitution.toLocaleString()}</p>
         
-        <h5>Instituciones Sugeridas:</h5>
+        <h5>Instituciones de Referencia:</h5>
         <ul>
             ${topInstitutions.map(inst => 
                 `<li>${inst.nombre_corto || inst.nombre} (${inst.calificacion}) - $${amountPerInstitution.toLocaleString()}</li>`
@@ -1280,6 +1285,9 @@ function simulateDiversification() {
             ${totalAmount <= maxPerInstitution * recommendedInstitutions ? 
               'Completa' : 'Parcial - considera mas instituciones'}
         </div>
+        <p style="margin-top: 12px; color: var(--color-text-secondary);">
+            Aviso: presento esta simulacion con fines informativos. No doy recomendaciones de inversion.
+        </p>
     `;
 }
 

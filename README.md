@@ -38,6 +38,12 @@ La actualizacion incluye validaciones de consistencia interna:
 - Coherencia entre archivos simplificados y expandidos
 - Coherencia entre agregados del sistema y datos por institucion
 
+## Seguridad y buenas practicas
+
+- No se publican API keys ni secretos en el repositorio.
+- El proyecto usa `.gitignore` para excluir entornos locales, archivos temporales y configuraciones sensibles.
+- Si se requiere integracion con APIs externas, usar variables de entorno y secretos del proveedor de CI/CD.
+
 ## Ejecucion local
 
 Abrir `index.html` en navegador o publicar con GitHub Pages.
@@ -46,6 +52,11 @@ Abrir `index.html` en navegador o publicar con GitHub Pages.
 
 Este repositorio usa una serie de datos mantenida dentro del proyecto.
 Para validacion regulatoria formal o decisiones de inversion definitivas, contrastar siempre con publicaciones oficiales de Superintendencia de Bancos, SEPS y BCE.
+
+## Aviso legal
+
+Comparto este contenido con fines exclusivamente informativos y educativos.
+No doy recomendacion, asesoria ni invitacion a invertir en bancos o cooperativas.
 
 ## Licencia
 
