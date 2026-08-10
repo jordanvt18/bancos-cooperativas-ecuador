@@ -3,149 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comparador Financiero Ecuador 2026</title>
+    <title>Comparador Financiero Ecuador 2026 — Bancos y Cooperativas</title>
+    <meta name="description" content="Compara bancos y cooperativas de Ecuador. Indicadores de solvencia, morosidad, liquidez, ROA y ROE. Simulador de crédito y guía financiera para el público.">
+    <meta name="keywords" content="bancos Ecuador, cooperativas Ecuador, comparador financiero, solvencia, morosidad, crédito Ecuador, COSEDE, seguro de depósitos">
+    <meta name="author" content="jordanvt18">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Comparador Financiero Ecuador 2026">
+    <meta property="og:description" content="Compara bancos y cooperativas de Ecuador con datos de solvencia, morosidad, liquidez y más.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_EC">
+    <meta name="twitter:card" content="summary">
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 </head>
 <body>
+    <!-- Skip link para accesibilidad -->
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
     <header class="header">
-        <div class="container">
-            <h1 class="header__title">Comparador Financiero Ecuador 2026</h1>
+        <div class="container header__inner">
+            <div>
+                <h1 class="header__title">Comparador Financiero Ecuador 2026</h1>
+                <p class="header__subtitle">Datos actualizados a <span id="last-updated">2026-03-31</span> · Fuente: Superintendencia de Bancos / SEPS</p>
+            </div>
             <div class="header__controls">
-                <button id="theme-toggle" class="btn btn--outline btn--sm">Modo Oscuro</button>
+                <!-- Búsqueda global -->
+                <div class="search-box">
+                    <input type="text" id="global-search" class="form-control search-input" placeholder="🔍 Buscar institución..." aria-label="Buscar institución financiera">
+                </div>
+                <button id="theme-toggle" class="btn btn--outline btn--sm" aria-label="Cambiar tema">🌙 Modo Oscuro</button>
             </div>
         </div>
     </header>
 
-    <nav class="nav">
-        <div class="container">
-            <div class="nav__tabs">
-                <button class="nav__tab active" data-tab="dashboard">Dashboard</button>
-                <button class="nav__tab" data-tab="bancos">Bancos</button>
-                <button class="nav__tab" data-tab="cooperativas">Cooperativas</button>
-                <button class="nav__tab" data-tab="indicadores">Indicadores Avanzados</button>
-                <button class="nav__tab" data-tab="credito">Modulo Credito</button>
-                <button class="nav__tab" data-tab="comparador">Comparador</button>
-                <button class="nav__tab" data-tab="alertas">Alertas CREA</button>
+    <nav class="nav" aria-label="Navegación principal">
+        <div class="container nav__inner">
+            <button id="menu-toggle" class="nav__hamburger" aria-label="Abrir menú" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="nav__tabs" id="nav-menu">
+                <button class="nav__tab active" data-tab="dashboard">📊 Dashboard</button>
+                <button class="nav__tab" data-tab="bancos">🏦 Bancos</button>
+                <button class="nav__tab" data-tab="cooperativas">🏢 Cooperativas</button>
+                <button class="nav__tab" data-tab="indicadores">📈 Indicadores</button>
+                <button class="nav__tab" data-tab="credito">💳 Crédito</button>
+                <button class="nav__tab" data-tab="comparador">⚖️ Comparador</button>
+                <button class="nav__tab" data-tab="alertas">🚨 Alertas CREA</button>
+                <button class="nav__tab" data-tab="guia">📚 Guía</button>
             </div>
         </div>
     </nav>
 
-    <main class="main">
+    <main class="main" id="main-content">
         <div class="container">
-            <!-- Dashboard Tab -->
-            <section id="dashboard" class="tab-content active">
-                <h2>Dashboard del Sistema Financiero Ecuatoriano</h2>
-                <div class="alert-card" style="margin-bottom: 16px; border-left-color: var(--color-warning);">
-                    <strong>Aviso importante:</strong> Presento esta aplicacion con fines informativos y educativos.
-                    No doy recomendaciones de inversion ni invito a invertir en bancos o cooperativas.
-                </div>
-                <div class="dashboard">
-                    <div class="dashboard__metrics">
-                        <div class="metric-card">
-                            <h3>Total Activos Bancos</h3>
-                            <div class="metric-value">$49,102 MM</div>
-                            <div class="metric-trend trend--positive">+8.2% anual (corte 2026-03)</div>
-                        </div>
-                        <div class="metric-card">
-                            <h3>Total Activos Cooperativas</h3>
-                            <div class="metric-value">$8,102 MM</div>
-                            <div class="metric-trend trend--positive">+9.4% anual (corte 2026-03)</div>
-                        </div>
-                        <div class="metric-card">
-                            <h3>Instituciones Supervisadas</h3>
-                            <div class="metric-value">157</div>
-                            <div class="metric-trend trend--neutral">Sistema estable</div>
-                        </div>
-                        <div class="metric-card">
-                            <h3>Seguro de Depositos</h3>
-                            <div class="metric-value">$32,000</div>
-                            <div class="metric-trend trend--info">Por cuenta</div>
-                        </div>
-                    </div>
 
-                    <div class="dashboard__charts">
-                        <div class="chart-container" style="position: relative; height: 300px;">
-                            <canvas id="sectorsChart"></canvas>
-                        </div>
-                        <div class="chart-container" style="position: relative; height: 300px;">
-                            <canvas id="indicatorsChart"></canvas>
-                        </div>
+            <!-- Dashboard -->
+            <section id="dashboard" class="tab-content active" aria-labelledby="dashboard-heading">
+                <h2 id="dashboard-heading">Dashboard del Sistema Financiero Ecuatoriano</h2>
+
+                <div class="alert-card" style="margin-bottom: 16px; border-left-color: var(--color-warning);">
+                    <strong>⚠️ Aviso importante:</strong> Esta aplicación es exclusivamente informativa y educativa.
+                    No damos recomendaciones de inversión ni invitamos a invertir en instituciones específicas.
+                    Verifica siempre con fuentes oficiales (Superintendencia de Bancos, SEPS, BCE).
+                </div>
+
+                <div class="dashboard__metrics">
+                    <div class="metric-card">
+                        <h3>Total Activos Bancos</h3>
+                        <div class="metric-value">$53,129 MM</div>
+                        <div class="metric-trend trend--positive">+8.2% anual (corte 2026-03)</div>
+                    </div>
+                    <div class="metric-card">
+                        <h3>Total Activos Cooperativas</h3>
+                        <div class="metric-value">$8,863 MM</div>
+                        <div class="metric-trend trend--positive">+9.4% anual (corte 2026-03)</div>
+                    </div>
+                    <div class="metric-card">
+                        <h3>Instituciones Supervisadas</h3>
+                        <div class="metric-value">176</div>
+                        <div class="metric-trend trend--neutral">Sistema estable</div>
+                    </div>
+                    <div class="metric-card">
+                        <h3>Seguro de Depósitos</h3>
+                        <div class="metric-value">$32,000</div>
+                        <div class="metric-trend trend--info">Por persona · COSEDE</div>
+                    </div>
+                </div>
+
+                <div class="dashboard__charts">
+                    <div class="chart-container">
+                        <canvas id="sectorsChart" aria-label="Gráfico de distribución de activos por sector"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="indicatorsChart" aria-label="Gráfico de indicadores promedio por sector"></canvas>
                     </div>
                 </div>
             </section>
 
-            <!-- Bancos Tab -->
-            <section id="bancos" class="tab-content">
+            <!-- Bancos -->
+            <section id="bancos" class="tab-content" aria-labelledby="bancos-heading">
                 <div class="section-header">
-                    <h2>Sector Bancario</h2>
-                    <div class="section-controls">
-                        <select id="bancos-filter" class="form-control">
-                            <option value="all">Todos los indicadores</option>
-                            <option value="basicos">Indicadores basicos</option>
-                            <option value="rentabilidad">Rentabilidad</option>
-                            <option value="productos">Productos credito</option>
-                        </select>
-                    </div>
+                    <h2 id="bancos-heading">🏦 Sector Bancario</h2>
+                    <span class="result-count" id="bancos-count"></span>
                 </div>
-                
                 <div class="table-container">
-                    <table id="bancos-table" class="data-table">
+                    <table id="bancos-table" class="data-table" aria-label="Tabla comparativa de bancos">
                         <thead>
                             <tr>
                                 <th>Banco</th>
-                                <th class="sortable" data-sort="activos_mill">Activos (MM)</th>
-                                <th class="sortable" data-sort="calificacion">Calificacion</th>
-                                <th class="sortable" data-sort="solvencia">Solvencia %</th>
-                                <th class="sortable" data-sort="morosidad">Morosidad %</th>
-                                <th class="sortable" data-sort="roa">ROA %</th>
-                                <th class="sortable" data-sort="roe">ROE %</th>
-                                <th class="sortable" data-sort="liquidez">Liquidez %</th>
+                                <th class="sortable" data-sort="activos_mill" aria-sort="none">Activos (MM)</th>
+                                <th class="sortable" data-sort="calificacion" aria-sort="none">Calificación</th>
+                                <th class="sortable" data-sort="solvencia" aria-sort="none">Solvencia %</th>
+                                <th class="sortable" data-sort="morosidad" aria-sort="none">Morosidad %</th>
+                                <th class="sortable" data-sort="roa" aria-sort="none">ROA %</th>
+                                <th class="sortable" data-sort="roe" aria-sort="none">ROE %</th>
+                                <th class="sortable" data-sort="liquidez" aria-sort="none">Liquidez %</th>
                                 <th>Acciones</th>
                             </tr>
                         </thead>
-                        <tbody id="bancos-tbody">
-                        </tbody>
+                        <tbody id="bancos-tbody"></tbody>
                     </table>
                 </div>
             </section>
 
-            <!-- Cooperativas Tab -->
-            <section id="cooperativas" class="tab-content">
+            <!-- Cooperativas -->
+            <section id="cooperativas" class="tab-content" aria-labelledby="cooperativas-heading">
                 <div class="section-header">
-                    <h2>Sector Cooperativo</h2>
+                    <h2 id="cooperativas-heading">🏢 Sector Cooperativo</h2>
                     <div class="cooperative-advantages">
                         <div class="advantage-badge">Propiedad de socios</div>
                         <div class="advantage-badge">Tasas preferenciales</div>
                         <div class="advantage-badge">Enfoque social</div>
                     </div>
                 </div>
-
                 <div class="table-container">
-                    <table id="cooperativas-table" class="data-table">
+                    <table id="cooperativas-table" class="data-table" aria-label="Tabla comparativa de cooperativas">
                         <thead>
                             <tr>
                                 <th>Cooperativa</th>
-                                <th class="sortable" data-sort="activos_mill">Activos (MM)</th>
-                                <th class="sortable" data-sort="calificacion">Calificacion</th>
-                                <th class="sortable" data-sort="solvencia">Solvencia %</th>
-                                <th class="sortable" data-sort="morosidad">Morosidad %</th>
-                                <th class="sortable" data-sort="roa">ROA %</th>
-                                <th class="sortable" data-sort="roe">ROE %</th>
-                                <th class="sortable" data-sort="socios_aprox">Socios</th>
+                                <th class="sortable" data-sort="activos_mill" aria-sort="none">Activos (MM)</th>
+                                <th class="sortable" data-sort="calificacion" aria-sort="none">Calificación</th>
+                                <th class="sortable" data-sort="solvencia" aria-sort="none">Solvencia %</th>
+                                <th class="sortable" data-sort="morosidad" aria-sort="none">Morosidad %</th>
+                                <th class="sortable" data-sort="roa" aria-sort="none">ROA %</th>
+                                <th class="sortable" data-sort="roe" aria-sort="none">ROE %</th>
+                                <th class="sortable" data-sort="socios_aprox" aria-sort="none">Socios</th>
                                 <th>Acciones</th>
                             </tr>
                         </thead>
-                        <tbody id="cooperativas-tbody">
-                        </tbody>
+                        <tbody id="cooperativas-tbody"></tbody>
                     </table>
                 </div>
             </section>
 
-            <!-- Indicadores Avanzados Tab -->
-            <section id="indicadores" class="tab-content">
-                <h2>Indicadores Avanzados y Analisis</h2>
-                
+            <!-- Indicadores Avanzados -->
+            <section id="indicadores" class="tab-content" aria-labelledby="indicadores-heading">
+                <h2 id="indicadores-heading">📈 Indicadores Avanzados y Análisis</h2>
+
                 <div class="indicators-filters">
                     <button class="btn btn--secondary active" data-filter="all">Todos</button>
                     <button class="btn btn--secondary" data-filter="corto">Corto Plazo</button>
@@ -155,217 +169,204 @@
                 <div class="indicators-grid">
                     <div class="indicators-table-container">
                         <h3>Comparativa de Indicadores</h3>
-                        <table id="indicators-table" class="data-table">
-                            <thead>
-                                <tr>
-                                    <th>Institucion</th>
-                                    <th>ROA</th>
-                                    <th>ROE</th>
-                                    <th>CIR</th>
-                                    <th>Solvencia</th>
-                                    <th>Crecimiento</th>
-                                    <th>Semaforo</th>
-                                </tr>
-                            </thead>
-                            <tbody id="indicators-tbody">
-                            </tbody>
-                        </table>
+                        <div class="table-container">
+                            <table id="indicators-table" class="data-table" aria-label="Tabla de indicadores avanzados">
+                                <thead>
+                                    <tr>
+                                        <th>Institución</th>
+                                        <th>ROA</th>
+                                        <th>ROE</th>
+                                        <th>CIR</th>
+                                        <th>Solvencia</th>
+                                        <th>Crecimiento</th>
+                                        <th>Semáforo</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="indicators-tbody"></tbody>
+                            </table>
+                        </div>
                     </div>
-
                     <div class="radar-chart-container">
-                        <h3>Analisis Radar</h3>
-                        <div class="chart-container" style="position: relative; height: 400px;">
-                            <canvas id="radarChart"></canvas>
+                        <h3>Análisis Radar</h3>
+                        <div class="chart-container">
+                            <canvas id="radarChart" aria-label="Gráfico radar de comparación multidimensional"></canvas>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Modulo Credito Tab -->
-            <section id="credito" class="tab-content">
-                <h2>Marketplace de Productos Crediticios</h2>
-                
+            <!-- Módulo de Crédito -->
+            <section id="credito" class="tab-content" aria-labelledby="credito-heading">
+                <h2 id="credito-heading">💳 Mercado de Productos Crediticios</h2>
+
                 <div class="credit-filters">
                     <div class="form-group">
-                        <label class="form-label">Tipo de Credito</label>
+                        <label class="form-label" for="credit-type">Tipo de Crédito</label>
                         <select id="credit-type" class="form-control">
                             <option value="all">Todos los productos</option>
                             <option value="consumo">Consumo</option>
                             <option value="hipotecario">Hipotecario</option>
                             <option value="pyme">PYME</option>
-                            <option value="microcredito">Microcredito</option>
+                            <option value="microcredito">Microcrédito</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label class="form-label">Monto Deseado ($)</label>
-                        <input type="number" id="credit-amount" class="form-control" placeholder="Ej: 10000">
+                        <label class="form-label" for="credit-amount">Monto Deseado ($)</label>
+                        <input type="number" id="credit-amount" class="form-control" placeholder="Ej: 10,000" min="0">
                     </div>
                     <div class="form-group">
-                        <label class="form-label">Plazo (meses)</label>
-                        <input type="number" id="credit-term" class="form-control" placeholder="Ej: 24">
+                        <label class="form-label" for="credit-term">Plazo (meses)</label>
+                        <input type="number" id="credit-term" class="form-control" placeholder="Ej: 24" min="1">
                     </div>
-                    <button id="filter-credits" class="btn btn--primary">Filtrar Productos</button>
+                    <button id="filter-credits" class="btn btn--primary">🔍 Filtrar Productos</button>
                 </div>
 
                 <div class="credit-calculator">
-                    <h3>Calculadora de Cuotas</h3>
+                    <h3>🧮 Calculadora de Cuotas</h3>
                     <div class="calculator-result" id="calculator-result">
-                        Selecciona un producto para calcular la cuota mensual
+                        Selecciona un producto y haz clic en "Calcular cuota" para ver el estimado.
                     </div>
                 </div>
 
-                <div class="credit-products" id="credit-products">
-                </div>
+                <div class="credit-products" id="credit-products"></div>
 
                 <div class="cooperative-advantages-section">
-                    <h3>Ventajas Cooperativas vs Bancos</h3>
+                    <h3>Ventajas: Cooperativas vs. Bancos</h3>
                     <div class="advantages-comparison">
                         <div class="advantage-item">
-                            <h4>Cooperativas</h4>
+                            <h4>🏢 Cooperativas</h4>
                             <ul>
-                                <li>Tasas mas bajas para socios</li>
-                                <li>Proceso mas personalizado</li>
+                                <li>Tasas más bajas para socios</li>
+                                <li>Proceso más personalizado</li>
                                 <li>Menos requisitos documentales</li>
                                 <li>Enfoque social y comunitario</li>
                             </ul>
                         </div>
                         <div class="advantage-item">
-                            <h4>Bancos</h4>
+                            <h4>🏦 Bancos</h4>
                             <ul>
                                 <li>Mayor capacidad crediticia</li>
-                                <li>Tecnologia mas avanzada</li>
-                                <li>Red mas amplia de oficinas</li>
-                                <li>Productos mas diversificados</li>
+                                <li>Tecnología más avanzada</li>
+                                <li>Red más amplia de oficinas</li>
+                                <li>Productos más diversificados</li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Comparador Tab -->
-            <section id="comparador" class="tab-content">
-                <h2>Comparador Integral</h2>
-                
+            <!-- Comparador -->
+            <section id="comparador" class="tab-content" aria-labelledby="comparador-heading">
+                <h2 id="comparador-heading">⚖️ Comparador Integral</h2>
+
                 <div class="comparator-controls">
                     <div class="institution-selectors">
                         <div class="selector-group">
-                            <label class="form-label">Institucion 1</label>
-                            <select id="compare-1" class="form-control">
-                                <option value="">Seleccionar...</option>
-                            </select>
+                            <label class="form-label" for="compare-1">Institución 1</label>
+                            <select id="compare-1" class="form-control"><option value="">Seleccionar...</option></select>
                         </div>
                         <div class="selector-group">
-                            <label class="form-label">Institucion 2</label>
-                            <select id="compare-2" class="form-control">
-                                <option value="">Seleccionar...</option>
-                            </select>
+                            <label class="form-label" for="compare-2">Institución 2</label>
+                            <select id="compare-2" class="form-control"><option value="">Seleccionar...</option></select>
                         </div>
                         <div class="selector-group">
-                            <label class="form-label">Institucion 3</label>
-                            <select id="compare-3" class="form-control">
-                                <option value="">Seleccionar...</option>
-                            </select>
+                            <label class="form-label" for="compare-3">Institución 3</label>
+                            <select id="compare-3" class="form-control"><option value="">Seleccionar...</option></select>
                         </div>
                     </div>
-                    <button id="generate-comparison" class="btn btn--primary">Generar Comparacion</button>
+                    <button id="generate-comparison" class="btn btn--primary">📊 Generar Comparación</button>
                 </div>
 
-                <div class="comparison-result" id="comparison-result">
-                </div>
-
-                <div class="recommendations" id="recommendations">
-                </div>
+                <div class="comparison-result" id="comparison-result"></div>
+                <div class="recommendations" id="recommendations"></div>
             </section>
 
-            <!-- Alertas CREA Tab -->
-            <section id="alertas" class="tab-content">
-                <h2>Caso CREA: Lecciones Aprendidas</h2>
-                
+            <!-- Alertas CREA -->
+            <section id="alertas" class="tab-content" aria-labelledby="alertas-heading">
+                <h2 id="alertas-heading">🚨 Caso CREA: Lecciones Aprendidas</h2>
+
                 <div class="alert-card alert-card--danger">
-                    <h3>Alerta: Liquidacion Cooperativa CREA</h3>
+                    <h3>⚠️ Alerta: Liquidación Cooperativa CREA</h3>
                     <div class="alert-details">
-                        <div class="alert-item">
-                            <strong>Fecha de liquidacion:</strong> 29 de julio, 2025
-                        </div>
-                        <div class="alert-item">
-                            <strong>Solvencia final:</strong> 3.36%
-                        </div>
-                        <div class="alert-item">
-                            <strong>Perdidas estimadas:</strong> $189.5 millones
-                        </div>
-                        <div class="alert-item">
-                            <strong>Socios afectados:</strong> 75,211 personas
-                        </div>
+                        <div class="alert-item"><strong>Fecha de liquidación:</strong> 29 de julio, 2025</div>
+                        <div class="alert-item"><strong>Solvencia final:</strong> 3.36%</div>
+                        <div class="alert-item"><strong>Pérdidas estimadas:</strong> $189.5 millones</div>
+                        <div class="alert-item"><strong>Socios afectados:</strong> 75,211 personas</div>
                     </div>
                 </div>
 
                 <div class="lessons-learned">
-                    <h3>Lecciones Aprendidas</h3>
-                    <p style="margin-bottom: 12px; color: var(--color-text-secondary);">
-                        Comparto este analisis como referencia para gestion de riesgo. No doy recomendaciones de inversion.
-                    </p>
+                    <h3>📖 Lecciones Aprendidas</h3>
+                    <p class="lessons-subtitle">Compartimos este análisis como referencia para gestión de riesgo. No damos recomendaciones de inversión.</p>
                     <div class="lessons-grid">
                         <div class="lesson-card">
-                            <div class="lesson-icon">Riesgo</div>
-                            <h4>Monitorear solvencia mensual</h4>
-                            <p>Revisar indicadores de solvencia regularmente y evitar instituciones con tendencia decreciente.</p>
+                            <div class="lesson-icon">📉</div>
+                            <h4>Monitorear solvencia</h4>
+                            <p>Revisar indicadores de solvencia mensualmente y evitar instituciones con tendencia decreciente.</p>
                         </div>
                         <div class="lesson-card">
-                            <div class="lesson-icon">Diversifica</div>
+                            <div class="lesson-icon">🔄</div>
                             <h4>Diversificar siempre</h4>
-                            <p>No concentrar todos los ahorros en una sola institucion financiera.</p>
+                            <p>No concentrar todos los ahorros en una sola institución financiera.</p>
                         </div>
                         <div class="lesson-card">
-                            <div class="lesson-icon">Limite</div>
-                            <h4>Limite de $32,000</h4>
-                            <p>Mantener maximo $32,000 por institucion para proteccion del seguro de depositos.</p>
+                            <div class="lesson-icon">🛡️</div>
+                            <h4>Límite de $32,000</h4>
+                            <p>Mantener máximo $32,000 por institución para protección del seguro de depósitos COSEDE.</p>
                         </div>
                         <div class="lesson-card">
-                            <div class="lesson-icon">Rating</div>
+                            <div class="lesson-icon">⭐</div>
                             <h4>Preferir AA+/AA</h4>
                             <p>Seleccionar instituciones con calificaciones de riesgo altas y reconocidas.</p>
                         </div>
                         <div class="lesson-card">
-                            <div class="lesson-icon">Revision</div>
+                            <div class="lesson-icon">🔍</div>
                             <h4>Revisar estados financieros</h4>
-                            <p>Analizar periodicamente los reportes financieros publicos disponibles.</p>
+                            <p>Analizar periódicamente los reportes financieros públicos disponibles.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="risk-simulator">
-                    <h3>Simulador de Diversificacion</h3>
+                    <h3>🧮 Simulador de Diversificación</h3>
                     <div class="simulator-controls">
                         <div class="form-group">
-                            <label class="form-label">Monto total a invertir ($)</label>
-                            <input type="number" id="total-amount" class="form-control" placeholder="100000">
+                            <label class="form-label" for="total-amount">Monto total ($)</label>
+                            <input type="number" id="total-amount" class="form-control" placeholder="100,000" min="0">
                         </div>
-                        <button id="simulate-diversification" class="btn btn--primary">Simular Diversificacion</button>
+                        <button id="simulate-diversification" class="btn btn--primary">Simular Diversificación</button>
                     </div>
-                    <div class="simulation-result" id="simulation-result">
-                    </div>
+                    <div class="simulation-result" id="simulation-result"></div>
                 </div>
+            </section>
+
+            <!-- Guía para el público -->
+            <section id="guia" class="tab-content" aria-labelledby="guia-heading">
+                <h2 id="guia-heading">📚 Guía para el Público</h2>
+                <p class="guia-subtitle">Conceptos clave para entender el sistema financiero ecuatoriano y tomar decisiones informadas.</p>
+                <div class="guia-grid"></div>
             </section>
         </div>
     </main>
 
-    <!-- Modal for institution details -->
-    <div id="institution-modal" class="modal hidden">
+    <!-- Modal para detalles de institución -->
+    <div id="institution-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
         <div class="modal__backdrop"></div>
         <div class="modal__content">
             <div class="modal__header">
-                <h3 id="modal-title">Detalles de la Institucion</h3>
-                <button id="modal-close" class="modal__close">&times;</button>
+                <h3 id="modal-title">Detalles de la Institución</h3>
+                <button id="modal-close" class="modal__close" aria-label="Cerrar">&times;</button>
             </div>
-            <div class="modal__body" id="modal-body">
-            </div>
+            <div class="modal__body" id="modal-body"></div>
         </div>
     </div>
 
     <footer class="footer-disclaimer">
         <div class="container">
             <p>
-                Aviso legal: comparto contenido exclusivamente informativo y educativo. No doy recomendaciones de inversion en instituciones especificas.
+                ⚠️ <strong>Aviso legal:</strong> Este contenido es exclusivamente informativo y educativo.
+                No constituye recomendación, asesoría ni invitación a invertir en instituciones específicas.
+                Verifica siempre con fuentes oficiales: Superintendencia de Bancos, SEPS, BCE y COSEDE.
             </p>
         </div>
     </footer>
@@ -373,5 +374,3 @@
     <script src="app.js"></script>
 </body>
 </html>
-
-

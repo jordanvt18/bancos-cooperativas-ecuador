@@ -1,63 +1,103 @@
-# Comparador Financiero Ecuador 2026
+# Comparador Financiero Ecuador 2026 🇪🇨
 
-Aplicacion web para comparar bancos y cooperativas de Ecuador con enfoque en inversion conservadora y renta fija.
+Aplicación web para comparar bancos y cooperativas de Ecuador con enfoque en educación financiera para el público general.
 
-## Objetivo
+**[Ver aplicación →](https://jordanvt18.github.io/bancos-cooperativas-ecuador/)**
 
-Entregar una alternativa informada para evaluar instituciones financieras, con foco en:
-- Solvencia
-- Morosidad
-- Liquidez
-- Cobertura
-- Rentabilidad (ROA y ROE)
+## 🎯 Objetivo
 
-## Datos y alcance
+Entregar una herramienta informativa y educativa para que cualquier persona pueda evaluar instituciones financieras ecuatorianas, entendiendo indicadores clave como:
 
-- Corte actualizado: `2026-03-31`
-- Archivos principales:
-  - `data/bancos.json`
-  - `data/cooperativas.json`
-  - `data/bancos_expandidos.json`
-  - `data/cooperativas_expandidas.json`
-  - `data/indicadores_sistema.json`
-- Frontend sincronizado con el mismo corte en `app.js` e `index.html`
+- **Solvencia** — capacidad de absorber pérdidas
+- **Morosidad** — calidad de la cartera de crédito
+- **Liquidez** — disponibilidad de efectivo
+- **Cobertura** — protección ante cartera vencida
+- **Rentabilidad** — ROA y ROE
+- **Calificación de riesgo** — evaluación por calificadoras
 
-## Funcionalidades
+## 📊 Funcionalidades
 
-- Dashboard de indicadores agregados del sistema
-- Tablas comparativas de bancos y cooperativas
-- Modulo de credito con filtros por tipo, monto y plazo
-- Comparador de instituciones con recomendaciones
-- Simulador de diversificacion con referencia de cobertura COSEDE
+| Sección | Descripción |
+|---------|-------------|
+| 📊 **Dashboard** | Indicadores agregados del sistema financiero con gráficos interactivos |
+| 🏦 **Bancos** | Tabla comparativa de los principales bancos con ordenamiento por columnas |
+| 🏢 **Cooperativas** | Tabla del sector cooperativo (segmento 1) con datos de socios |
+| 📈 **Indicadores Avanzados** | ROA, ROE, CIR, solvencia y semáforo de riesgo + gráfico radar |
+| 💳 **Crédito** | Mercado de productos crediticios con calculadora de cuotas |
+| ⚖️ **Comparador** | Comparación lado a lado de hasta 3 instituciones |
+| 🚨 **Alertas CREA** | Lecciones del caso de liquidación de la Cooperativa CREA (2025) |
+| 📚 **Guía** | Conceptos clave explicados para el público general |
+| 🔍 **Búsqueda** | Filtro instantáneo en todas las tablas |
+| 🌙 **Modo oscuro** | Tema claro/oscuro con detección automática |
 
-## Validacion de datos
+## 📁 Estructura del Proyecto
 
-La actualizacion incluye validaciones de consistencia interna:
-- Estructura minima por institucion
-- Umbrales regulatorios basicos (solvencia minima y morosidad)
-- Coherencia entre archivos simplificados y expandidos
-- Coherencia entre agregados del sistema y datos por institucion
+```
+bancos-cooperativas-ecuador/
+├── index.html              # Aplicación principal
+├── app.js                  # Lógica de la aplicación
+├── style.css               # Estilos (incluye print y responsive)
+├── data/
+│   ├── bancos.json         # Datos de bancos (10 instituciones)
+│   ├── cooperativas.json   # Datos de cooperativas (7 instituciones)
+│   ├── indicadores_sistema.json  # Métricas agregadas del sistema
+│   └── monthly/            # Backups mensuales
+├── scripts/
+│   ├── update_data.py      # Script de actualización automática
+│   └── validate_data.py    # Validación de consistencia
+└── assets/
+    └── charts/             # Datos históricos para gráficos
+```
 
-## Seguridad y buenas practicas
+## 📅 Datos y Alcance
 
-- No se publican API keys ni secretos en el repositorio.
-- El proyecto usa `.gitignore` para excluir entornos locales, archivos temporales y configuraciones sensibles.
-- Si se requiere integracion con APIs externas, usar variables de entorno y secretos del proveedor de CI/CD.
+- **Corte actual:** 2026-03-31
+- **Bancos incluidos:** 10 (principales del sistema)
+- **Cooperativas incluidas:** 7 (segmento 1)
+- **Fuentes:** Superintendencia de Bancos, SEPS, BCE
+- **Seguro de depósitos COSEDE:** $32,000 por persona por institución
 
-## Ejecucion local
+⚠️ **Los datos son aproximados con fines informativos.** Para decisiones de inversión definitivas, verifica siempre con publicaciones oficiales.
 
-Abrir `index.html` en navegador o publicar con GitHub Pages.
+## 🚀 Ejecución Local
 
-## Nota metodologica
+```bash
+# Clonar el repositorio
+git clone https://github.com/jordanvt18/bancos-cooperativas-ecuador.git
+cd bancos-cooperativas-ecuador
 
-Este repositorio usa una serie de datos mantenida dentro del proyecto.
-Para validacion regulatoria formal o decisiones de inversion definitivas, contrastar siempre con publicaciones oficiales de Superintendencia de Bancos, SEPS y BCE.
+# Opción 1: Servidor Python
+python -m http.server 8000
 
-## Aviso legal
+# Opción 2: Servidor Node.js
+npx serve .
 
-Comparto este contenido con fines exclusivamente informativos y educativos.
-No doy recomendacion, asesoria ni invitacion a invertir en bancos o cooperativas.
+# Opción 3: Abrir directamente
+# Arrastra index.html a tu navegador
+```
 
-## Licencia
+## 🌐 Despliegue
 
-MIT
+El proyecto está configurado para GitHub Pages:
+
+1. Ve a Settings → Pages en el repositorio
+2. Selecciona la rama `main` y carpeta `/ (root)`
+3. Click Save — la app estará disponible en `https://jordanvt18.github.io/bancos-cooperativas-ecuador/`
+
+## 📝 Nota Metodológica
+
+Este repositorio usa una serie de datos mantenida dentro del proyecto. Los datos se actualizan manualmente con cada corte trimestral publicado por los organismos de control.
+
+Para validación regulatoria formal o decisiones de inversión definitivas, contrasta siempre con publicaciones oficiales de:
+- [Superintendencia de Bancos](https://www.superbancos.gob.ec/)
+- [SEPS](https://www.seps.gob.ec/)
+- [Banco Central del Ecuador](https://www.bce.fin.ec/)
+- [COSEDE](https://www.cosede.fin.ec/)
+
+## ⚖️ Aviso Legal
+
+Este contenido se comparte con fines **exclusivamente informativos y educativos**. No constituye recomendación, asesoría ni invitación a invertir en bancos o cooperativas específicas.
+
+## 📄 Licencia
+
+MIT — © 2026 Jordan VT
