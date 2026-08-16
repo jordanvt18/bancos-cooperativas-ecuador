@@ -6,6 +6,8 @@
   },
   "sistema": {
     "total_activos": 61992.13,
+    "total_activos_bancos": 53128.64,
+    "total_activos_coops": 8863.49,
     "total_patrimonio": 6002.35,
     "instituciones": {
       "bancos": 24,

@@ -20,7 +20,34 @@
       "estado": "Activo",
       "supervision": "Superintendencia de Bancos",
       "website": "https://www.pichincha.com",
-      "tipo": "banco"
+      "tipo": "banco",
+      "productos_credito": {
+        "consumo": {
+          "monto_min": 1000,
+          "monto_max": 200000,
+          "tasa_min": 9.5,
+          "tasa_max": 12.8,
+          "plazo_max_meses": 60,
+          "requisitos": ["Cédula", "RUC/RISE", "Rol de pagos", "Cuenta corriente/ahorros"]
+        },
+        "hipotecario": {
+          "monto_min": 15000,
+          "monto_max": 400000,
+          "tasa_min": 7.2,
+          "tasa_max": 8.9,
+          "plazo_max_meses": 240,
+          "financiamiento_max": 80,
+          "requisitos": ["Entrada 20%", "Ingresos demostrables", "Avalúo", "Escrituras"]
+        },
+        "pyme": {
+          "monto_min": 5000,
+          "monto_max": 500000,
+          "tasa_min": 10.8,
+          "tasa_max": 14.2,
+          "plazo_max_meses": 48,
+          "requisitos": ["RUC activo", "Balances", "Flujo de caja", "Garantías"]
+        }
+      }
     },
     {
       "id": 2,
@@ -38,7 +65,34 @@
       "estado": "Activo",
       "supervision": "Superintendencia de Bancos",
       "website": "https://www.bancodelpacifico.com",
-      "tipo": "banco"
+      "tipo": "banco",
+      "productos_credito": {
+        "consumo": {
+          "monto_min": 500,
+          "monto_max": 150000,
+          "tasa_min": 9.8,
+          "tasa_max": 13.5,
+          "plazo_max_meses": 60,
+          "requisitos": ["Cédula", "Ingresos", "Referencias", "Cuenta en el banco"]
+        },
+        "hipotecario": {
+          "monto_min": 20000,
+          "monto_max": 350000,
+          "tasa_min": 7.8,
+          "tasa_max": 9.2,
+          "plazo_max_meses": 300,
+          "financiamiento_max": 75,
+          "requisitos": ["Entrada 25%", "Estabilidad laboral", "Avalúo comercial", "Seguro hipotecario"]
+        },
+        "pyme": {
+          "monto_min": 3000,
+          "monto_max": 300000,
+          "tasa_min": 11.2,
+          "tasa_max": 15.1,
+          "plazo_max_meses": 60,
+          "requisitos": ["Experiencia comercial", "Estados financieros", "Plan de negocios", "Garantías reales"]
+        }
+      }
     },
     {
       "id": 3,
@@ -51,18 +105,45 @@
       "morosidad": 3.24,
       "liquidez": 26,
       "cobertura": 194,
-      "roa": 1.30,
+      "roa": 1.3,
       "roe": 14.53,
       "estado": "Activo",
       "supervision": "Superintendencia de Bancos",
       "website": "https://www.bancoguayaquil.com",
-      "tipo": "banco"
+      "tipo": "banco",
+      "productos_credito": {
+        "consumo": {
+          "monto_min": 1000,
+          "monto_max": 180000,
+          "tasa_min": 10.2,
+          "tasa_max": 13.8,
+          "plazo_max_meses": 72,
+          "requisitos": ["Documento de identidad", "Comprobante de ingresos", "Referencias comerciales", "Cuenta activa"]
+        },
+        "hipotecario": {
+          "monto_min": 25000,
+          "monto_max": 450000,
+          "tasa_min": 7.5,
+          "tasa_max": 8.8,
+          "plazo_max_meses": 360,
+          "financiamiento_max": 85,
+          "requisitos": ["Entrada 15%", "Certificados de ingresos", "Avalúo actualizado", "Póliza de seguro"]
+        },
+        "pyme": {
+          "monto_min": 2000,
+          "monto_max": 400000,
+          "tasa_min": 11.5,
+          "tasa_max": 14.8,
+          "plazo_max_meses": 72,
+          "requisitos": ["RUC vigente", "Declaraciones SRI", "Balances auditados", "Experiencia en el sector"]
+        }
+      }
     },
     {
       "id": 4,
       "nombre": "Produbanco",
       "activos_mill": 9599.94,
-      "patrimonio_mill": 742.50,
+      "patrimonio_mill": 742.5,
       "calificacion": "AA+",
       "utilidades_mill": 42.24,
       "solvencia": 14.46,
@@ -74,7 +155,34 @@
       "estado": "Activo",
       "supervision": "Superintendencia de Bancos",
       "website": "https://www.produbanco.com.ec",
-      "tipo": "banco"
+      "tipo": "banco",
+      "productos_credito": {
+        "consumo": {
+          "monto_min": 2500,
+          "monto_max": 300000,
+          "tasa_min": 10.5,
+          "tasa_max": 13.5,
+          "plazo_max_meses": 60,
+          "requisitos": ["Cédula vigente", "Estabilidad laboral", "Ingresos demostrables", "Buen historial crediticio"]
+        },
+        "hipotecario": {
+          "monto_min": 30000,
+          "monto_max": 500000,
+          "tasa_min": 7.5,
+          "tasa_max": 9.0,
+          "plazo_max_meses": 240,
+          "financiamiento_max": 80,
+          "requisitos": ["Entrada 20%", "Ingresos estables", "Avalúo comercial", "Escrituras globales"]
+        },
+        "pyme": {
+          "monto_min": 5000,
+          "monto_max": 1000000,
+          "tasa_min": 11.0,
+          "tasa_max": 14.0,
+          "plazo_max_meses": 48,
+          "requisitos": ["RUC activo 2 años", "Estados financieros", "Flujos proyectados", "Garantías suficientes"]
+        }
+      }
     },
     {
       "id": 5,
@@ -82,8 +190,8 @@
       "activos_mill": 5847.32,
       "patrimonio_mill": 512.45,
       "calificacion": "AA+",
-      "utilidades_mill": 68.90,
-      "solvencia": 14.80,
+      "utilidades_mill": 68.9,
+      "solvencia": 14.8,
       "morosidad": 2.85,
       "liquidez": 34,
       "cobertura": 225,
@@ -92,7 +200,34 @@
       "estado": "Activo",
       "supervision": "Superintendencia de Bancos",
       "website": "https://www.bancointernacional.com.ec",
-      "tipo": "banco"
+      "tipo": "banco",
+      "productos_credito": {
+        "consumo": {
+          "monto_min": 800,
+          "monto_max": 120000,
+          "tasa_min": 9.7,
+          "tasa_max": 13.0,
+          "plazo_max_meses": 60,
+          "requisitos": ["Cédula", "Ingresos comprobados", "Referencias personales", "Cuenta activa"]
+        },
+        "hipotecario": {
+          "monto_min": 20000,
+          "monto_max": 400000,
+          "tasa_min": 7.4,
+          "tasa_max": 8.7,
+          "plazo_max_meses": 300,
+          "financiamiento_max": 80,
+          "requisitos": ["Entrada 20%", "Estabilidad laboral", "Avalúo", "Seguro de desgravamen"]
+        },
+        "pyme": {
+          "monto_min": 3000,
+          "monto_max": 350000,
+          "tasa_min": 10.9,
+          "tasa_max": 14.5,
+          "plazo_max_meses": 60,
+          "requisitos": ["RUC activo", "Declaraciones SRI", "Estados financieros", "Garantías"]
+        }
+      }
     },
     {
       "id": 6,
@@ -100,7 +235,7 @@
       "activos_mill": 4987.65,
       "patrimonio_mill": 445.32,
       "calificacion": "AA+",
-      "utilidades_mill": 52.30,
+      "utilidades_mill": 52.3,
       "solvencia": 14.92,
       "morosidad": 2.68,
       "liquidez": 35,
@@ -110,7 +245,34 @@
       "estado": "Activo",
       "supervision": "Superintendencia de Bancos",
       "website": "https://www.bolivariano.com.ec",
-      "tipo": "banco"
+      "tipo": "banco",
+      "productos_credito": {
+        "consumo": {
+          "monto_min": 500,
+          "monto_max": 100000,
+          "tasa_min": 9.6,
+          "tasa_max": 12.9,
+          "plazo_max_meses": 60,
+          "requisitos": ["Cédula", "Rol de pagos", "Referencias", "Cuenta en el banco"]
+        },
+        "hipotecario": {
+          "monto_min": 15000,
+          "monto_max": 300000,
+          "tasa_min": 7.3,
+          "tasa_max": 8.6,
+          "plazo_max_meses": 240,
+          "financiamiento_max": 80,
+          "requisitos": ["Entrada 20%", "Ingresos demostrables", "Avalúo comercial", "Pólizas"]
+        },
+        "pyme": {
+          "monto_min": 2000,
+          "monto_max": 250000,
+          "tasa_min": 10.7,
+          "tasa_max": 14.0,
+          "plazo_max_meses": 48,
+          "requisitos": ["RUC vigente", "Balances", "Flujo de caja", "Garantías reales"]
+        }
+      }
     },
     {
       "id": 7,
@@ -128,13 +290,40 @@
       "estado": "Activo",
       "supervision": "Superintendencia de Bancos",
       "website": "https://www.dinersclub.com.ec",
-      "tipo": "banco"
+      "tipo": "banco",
+      "productos_credito": {
+        "consumo": {
+          "monto_min": 1000,
+          "monto_max": 80000,
+          "tasa_min": 11.0,
+          "tasa_max": 14.5,
+          "plazo_max_meses": 48,
+          "requisitos": ["Cédula", "Ingresos", "Historial crediticio", "Cuenta activa"]
+        },
+        "hipotecario": {
+          "monto_min": 20000,
+          "monto_max": 250000,
+          "tasa_min": 8.0,
+          "tasa_max": 9.5,
+          "plazo_max_meses": 240,
+          "financiamiento_max": 75,
+          "requisitos": ["Entrada 25%", "Estabilidad laboral", "Avalúo", "Seguro hipotecario"]
+        },
+        "pyme": {
+          "monto_min": 3000,
+          "monto_max": 200000,
+          "tasa_min": 11.8,
+          "tasa_max": 15.2,
+          "plazo_max_meses": 48,
+          "requisitos": ["RUC activo", "Estados financieros", "Plan de negocios", "Garantías"]
+        }
+      }
     },
     {
       "id": 8,
       "nombre": "Banco General Rumiñahui",
       "activos_mill": 1654.28,
-      "patrimonio_mill": 156.80,
+      "patrimonio_mill": 156.8,
       "calificacion": "AA-",
       "utilidades_mill": 15.45,
       "solvencia": 13.95,
@@ -146,16 +335,43 @@
       "estado": "Activo",
       "supervision": "Superintendencia de Bancos",
       "website": "https://www.bgr.com.ec",
-      "tipo": "banco"
+      "tipo": "banco",
+      "productos_credito": {
+        "consumo": {
+          "monto_min": 500,
+          "monto_max": 60000,
+          "tasa_min": 10.8,
+          "tasa_max": 14.0,
+          "plazo_max_meses": 60,
+          "requisitos": ["Cédula", "Rol de pagos", "Certificado laboral", "Referencias"]
+        },
+        "hipotecario": {
+          "monto_min": 10000,
+          "monto_max": 200000,
+          "tasa_min": 7.9,
+          "tasa_max": 9.3,
+          "plazo_max_meses": 240,
+          "financiamiento_max": 75,
+          "requisitos": ["Entrada 25%", "Ingresos demostrables", "Avalúo", "Póliza de seguro"]
+        },
+        "pyme": {
+          "monto_min": 2000,
+          "monto_max": 150000,
+          "tasa_min": 11.6,
+          "tasa_max": 15.0,
+          "plazo_max_meses": 48,
+          "requisitos": ["RUC activo", "Balances", "Declaraciones SRI", "Garantías"]
+        }
+      }
     },
     {
       "id": 9,
       "nombre": "Banco Solidario",
       "activos_mill": 1432.56,
-      "patrimonio_mill": 132.40,
+      "patrimonio_mill": 132.4,
       "calificacion": "A+",
       "utilidades_mill": 8.72,
-      "solvencia": 13.20,
+      "solvencia": 13.2,
       "morosidad": 4.15,
       "liquidez": 23,
       "cobertura": 158,
@@ -164,7 +380,33 @@
       "estado": "Activo",
       "supervision": "Superintendencia de Bancos",
       "website": "https://www.banco-solidario.com",
-      "tipo": "banco"
+      "tipo": "banco",
+      "productos_credito": {
+        "consumo": {
+          "monto_min": 300,
+          "monto_max": 50000,
+          "tasa_min": 12.5,
+          "tasa_max": 16.0,
+          "plazo_max_meses": 48,
+          "requisitos": ["Cédula", "Ingresos", "Referencias", "Cuenta activa"]
+        },
+        "microcredito": {
+          "monto_min": 200,
+          "monto_max": 20000,
+          "tasa_min": 15.0,
+          "tasa_max": 22.0,
+          "plazo_max_meses": 36,
+          "requisitos": ["Actividad económica", "RUC/RISE", "Referencias comerciales", "Capacidad de pago"]
+        },
+        "pyme": {
+          "monto_min": 1000,
+          "monto_max": 100000,
+          "tasa_min": 12.8,
+          "tasa_max": 16.5,
+          "plazo_max_meses": 48,
+          "requisitos": ["RUC activo", "Flujo de caja", "Garantías", "Experiencia comercial"]
+        }
+      }
     },
     {
       "id": 10,
@@ -173,16 +415,43 @@
       "patrimonio_mill": 118.92,
       "calificacion": "A+",
       "utilidades_mill": 10.35,
-      "solvencia": 13.50,
+      "solvencia": 13.5,
       "morosidad": 3.95,
       "liquidez": 24,
       "cobertura": 165,
       "roa": 0.83,
-      "roe": 8.70,
+      "roe": 8.7,
       "estado": "Activo",
       "supervision": "Superintendencia de Bancos",
       "website": "https://www.bancomachala.com",
-      "tipo": "banco"
+      "tipo": "banco",
+      "productos_credito": {
+        "consumo": {
+          "monto_min": 500,
+          "monto_max": 50000,
+          "tasa_min": 11.5,
+          "tasa_max": 15.0,
+          "plazo_max_meses": 60,
+          "requisitos": ["Cédula", "Rol de pagos", "Referencias", "Cuenta activa"]
+        },
+        "hipotecario": {
+          "monto_min": 10000,
+          "monto_max": 180000,
+          "tasa_min": 8.2,
+          "tasa_max": 9.8,
+          "plazo_max_meses": 240,
+          "financiamiento_max": 75,
+          "requisitos": ["Entrada 25%", "Ingresos demostrables", "Avalúo", "Seguro"]
+        },
+        "pyme": {
+          "monto_min": 1000,
+          "monto_max": 120000,
+          "tasa_min": 12.0,
+          "tasa_max": 15.8,
+          "plazo_max_meses": 48,
+          "requisitos": ["RUC activo", "Balances", "Garantías", "Experiencia comercial"]
+        }
+      }
     }
   ]
 }

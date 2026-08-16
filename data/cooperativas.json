@@ -18,13 +18,52 @@
       "liquidez": 23,
       "cobertura": 183,
       "roa": 1.69,
-      "roe": 12.80,
+      "roe": 12.8,
       "socios_aprox": 201105,
       "estado": "Activa",
       "provincia": "Pichincha",
       "supervision": "SEPS",
       "website": "https://www.jep.coop",
-      "tipo": "cooperativa"
+      "tipo": "cooperativa",
+      "productos_credito": {
+        "consumo": {
+          "monto_min": 300,
+          "monto_max": 50000,
+          "tasa_min": 12.5,
+          "tasa_max": 16.8,
+          "plazo_max_meses": 60,
+          "requisitos": ["Socio activo", "Cédula", "Certificado de ingresos", "Garante personal"],
+          "ventajas": ["Trámite ágil", "Menos documentos", "Tasas preferenciales para socios"]
+        },
+        "microcredito": {
+          "monto_min": 500,
+          "monto_max": 20000,
+          "tasa_min": 15.2,
+          "tasa_max": 22.5,
+          "plazo_max_meses": 36,
+          "requisitos": ["Actividad económica", "RUC/RISE", "Referencias comerciales", "Capacidad de pago"],
+          "ventajas": ["Evaluación in situ", "Flexibilidad de garantías", "Acompañamiento técnico"]
+        },
+        "credipymes": {
+          "monto_min": 1000,
+          "monto_max": 1000000,
+          "tasa_min": 11.33,
+          "tasa_max": 16.8,
+          "plazo_max_meses": 48,
+          "requisitos": ["RUC activo", "Balances", "Plan de inversión", "Garantías"],
+          "ventajas": ["Tasa competitiva", "Seguimiento personalizado", "Periodos de gracia"]
+        },
+        "hipotecario": {
+          "monto_min": 10000,
+          "monto_max": 200000,
+          "tasa_min": 8.9,
+          "tasa_max": 11.5,
+          "plazo_max_meses": 180,
+          "financiamiento_max": 70,
+          "requisitos": ["Socio 6 meses", "Entrada 30%", "Avalúo", "Seguro hipotecario"],
+          "ventajas": ["Menor entrada", "Proceso personalizado", "Tasas fijas"]
+        }
+      }
     },
     {
       "id": 2,
@@ -40,13 +79,52 @@
       "liquidez": 21,
       "cobertura": 176,
       "roa": 1.94,
-      "roe": 14.40,
+      "roe": 14.4,
       "socios_aprox": 156415,
       "estado": "Activa",
       "provincia": "Azuay",
       "supervision": "SEPS",
       "website": "https://www.jardinazuayo.fin.ec",
-      "tipo": "cooperativa"
+      "tipo": "cooperativa",
+      "productos_credito": {
+        "consumo": {
+          "monto_min": 500,
+          "monto_max": 40000,
+          "tasa_min": 13.2,
+          "tasa_max": 17.5,
+          "plazo_max_meses": 48,
+          "requisitos": ["Antigüedad como socio 3 meses", "Cédula", "Rol de pagos", "Garante"],
+          "ventajas": ["Tasa diferenciada para socios", "Sin comisiones", "Aprobación rápida"]
+        },
+        "microcredito": {
+          "monto_min": 300,
+          "monto_max": 15000,
+          "tasa_min": 16.8,
+          "tasa_max": 24.2,
+          "plazo_max_meses": 24,
+          "requisitos": ["Actividad 6 meses", "Referencias", "Visita al negocio", "Croquis de ubicación"],
+          "ventajas": ["Metodología grupal", "Capacitación empresarial", "Renovación automática"]
+        },
+        "agropecuario": {
+          "monto_min": 1000,
+          "monto_max": 50000,
+          "tasa_min": 11.8,
+          "tasa_max": 16.2,
+          "plazo_max_meses": 60,
+          "requisitos": ["Actividad agropecuaria", "Título de propiedad", "Asistencia técnica", "Seguro de cultivos"],
+          "ventajas": ["Periodos de gracia", "Pagos estacionales", "Asesoría técnica"]
+        },
+        "vivienda": {
+          "monto_min": 8000,
+          "monto_max": 150000,
+          "tasa_min": 9.5,
+          "tasa_max": 12.2,
+          "plazo_max_meses": 180,
+          "financiamiento_max": 80,
+          "requisitos": ["Socio 1 año", "Entrada 20%", "Avalúo", "Pólizas"],
+          "ventajas": ["Menor entrada que en bancos", "Proceso ágil", "Tasas competitivas"]
+        }
+      }
     },
     {
       "id": 3,
@@ -62,13 +140,42 @@
       "liquidez": 22,
       "cobertura": 170,
       "roa": 1.04,
-      "roe": 9.40,
+      "roe": 9.4,
       "socios_aprox": 106139,
       "estado": "Activa",
       "provincia": "Pichincha",
       "supervision": "SEPS",
       "website": "https://www.cooppolicianacional.fin.ec",
-      "tipo": "cooperativa"
+      "tipo": "cooperativa",
+      "productos_credito": {
+        "consumo_policial": {
+          "monto_min": 500,
+          "monto_max": 100000,
+          "tasa_min": 8.5,
+          "tasa_max": 12.8,
+          "plazo_max_meses": 72,
+          "requisitos": ["Miembro activo de la Policía", "Antigüedad", "Descuento por rol", "Garante institucional"],
+          "ventajas": ["Tasas preferenciales", "Descuento automático", "Montos altos", "Sin garante externo"]
+        },
+        "consumo_general": {
+          "monto_min": 300,
+          "monto_max": 25000,
+          "tasa_min": 14.5,
+          "tasa_max": 18.2,
+          "plazo_max_meses": 48,
+          "requisitos": ["Socio de la cooperativa", "Ingresos comprobados", "Referencias", "Capacidad de pago"],
+          "ventajas": ["Proceso rápido", "Requisitos flexibles", "Atención personalizada"]
+        },
+        "emergencia": {
+          "monto_min": 200,
+          "monto_max": 5000,
+          "tasa_min": 15.8,
+          "tasa_max": 19.5,
+          "plazo_max_meses": 24,
+          "requisitos": ["Socio activo", "Justificación de emergencia", "Descuento automático"],
+          "ventajas": ["Aprobación inmediata", "Desembolso en 24h", "Sin papeleos"]
+        }
+      }
     },
     {
       "id": 4,
@@ -76,21 +183,51 @@
       "nombre_corto": "29 de Octubre",
       "ruc": "1790894274001",
       "activos_mill": 1356.78,
-      "patrimonio_mill": 125.40,
+      "patrimonio_mill": 125.4,
       "segmento": 1,
       "calificacion": "A",
-      "solvencia": 16.50,
+      "solvencia": 16.5,
       "morosidad": 5.95,
       "liquidez": 20,
       "cobertura": 162,
       "roa": 0.88,
-      "roe": 8.20,
+      "roe": 8.2,
       "socios_aprox": 89450,
       "estado": "Activa",
       "provincia": "Pichincha",
       "supervision": "SEPS",
       "website": "https://www.29deoctubre.fin.ec",
-      "tipo": "cooperativa"
+      "tipo": "cooperativa",
+      "productos_credito": {
+        "consumo": {
+          "monto_min": 300,
+          "monto_max": 30000,
+          "tasa_min": 13.5,
+          "tasa_max": 18.0,
+          "plazo_max_meses": 48,
+          "requisitos": ["Socio activo", "Cédula", "Ingresos", "Garante"],
+          "ventajas": ["Aprobación ágil", "Requisitos sencillos"]
+        },
+        "microcredito": {
+          "monto_min": 300,
+          "monto_max": 15000,
+          "tasa_min": 16.5,
+          "tasa_max": 23.0,
+          "plazo_max_meses": 36,
+          "requisitos": ["Actividad económica", "RUC/RISE", "Referencias"],
+          "ventajas": ["Evaluación in situ", "Acompañamiento"]
+        },
+        "vivienda": {
+          "monto_min": 5000,
+          "monto_max": 120000,
+          "tasa_min": 9.8,
+          "tasa_max": 12.5,
+          "plazo_max_meses": 180,
+          "financiamiento_max": 75,
+          "requisitos": ["Socio 1 año", "Entrada 25%", "Avalúo"],
+          "ventajas": ["Menor entrada", "Proceso personalizado"]
+        }
+      }
     },
     {
       "id": 5,
@@ -98,21 +235,50 @@
       "nombre_corto": "Oscus",
       "ruc": "1890001527001",
       "activos_mill": 987.45,
-      "patrimonio_mill": 92.30,
+      "patrimonio_mill": 92.3,
       "segmento": 1,
       "calificacion": "A",
-      "solvencia": 16.20,
+      "solvencia": 16.2,
       "morosidad": 6.12,
       "liquidez": 19,
       "cobertura": 155,
       "roa": 0.75,
-      "roe": 7.10,
+      "roe": 7.1,
       "socios_aprox": 72340,
       "estado": "Activa",
       "provincia": "Tungurahua",
       "supervision": "SEPS",
       "website": "https://www.oscus.fin.ec",
-      "tipo": "cooperativa"
+      "tipo": "cooperativa",
+      "productos_credito": {
+        "consumo": {
+          "monto_min": 200,
+          "monto_max": 25000,
+          "tasa_min": 13.8,
+          "tasa_max": 18.5,
+          "plazo_max_meses": 48,
+          "requisitos": ["Socio activo", "Cédula", "Ingresos", "Referencias"],
+          "ventajas": ["Trámite ágil", "Tasas para socios"]
+        },
+        "microcredito": {
+          "monto_min": 200,
+          "monto_max": 12000,
+          "tasa_min": 17.0,
+          "tasa_max": 24.0,
+          "plazo_max_meses": 36,
+          "requisitos": ["Actividad económica", "RUC/RISE", "Referencias comerciales"],
+          "ventajas": ["Metodología grupal", "Capacitación"]
+        },
+        "agropecuario": {
+          "monto_min": 800,
+          "monto_max": 30000,
+          "tasa_min": 12.2,
+          "tasa_max": 16.8,
+          "plazo_max_meses": 60,
+          "requisitos": ["Actividad agropecuaria", "Título de propiedad", "Seguro de cultivos"],
+          "ventajas": ["Periodos de gracia", "Pagos estacionales"]
+        }
+      }
     },
     {
       "id": 6,
@@ -123,18 +289,48 @@
       "patrimonio_mill": 84.56,
       "segmento": 1,
       "calificacion": "A-",
-      "solvencia": 15.80,
+      "solvencia": 15.8,
       "morosidad": 6.35,
       "liquidez": 18,
       "cobertura": 148,
       "roa": 0.68,
-      "roe": 6.50,
+      "roe": 6.5,
       "socios_aprox": 65890,
       "estado": "Activa",
       "provincia": "Pichincha",
       "supervision": "SEPS",
       "website": "https://www.alianzadelvalle.fin.ec",
-      "tipo": "cooperativa"
+      "tipo": "cooperativa",
+      "productos_credito": {
+        "consumo": {
+          "monto_min": 200,
+          "monto_max": 20000,
+          "tasa_min": 14.0,
+          "tasa_max": 19.0,
+          "plazo_max_meses": 48,
+          "requisitos": ["Socio activo", "Cédula", "Ingresos", "Garante"],
+          "ventajas": ["Proceso rápido", "Atención personalizada"]
+        },
+        "microcredito": {
+          "monto_min": 200,
+          "monto_max": 10000,
+          "tasa_min": 17.5,
+          "tasa_max": 24.5,
+          "plazo_max_meses": 36,
+          "requisitos": ["Actividad económica", "RUC/RISE", "Referencias"],
+          "ventajas": ["Evaluación in situ", "Flexibilidad de garantías"]
+        },
+        "vivienda": {
+          "monto_min": 5000,
+          "monto_max": 100000,
+          "tasa_min": 10.0,
+          "tasa_max": 13.0,
+          "plazo_max_meses": 180,
+          "financiamiento_max": 70,
+          "requisitos": ["Socio 1 año", "Entrada 30%", "Avalúo"],
+          "ventajas": ["Proceso personalizado"]
+        }
+      }
     },
     {
       "id": 7,
@@ -145,18 +341,47 @@
       "patrimonio_mill": 72.15,
       "segmento": 1,
       "calificacion": "A-",
-      "solvencia": 15.50,
-      "morosidad": 6.80,
+      "solvencia": 15.5,
+      "morosidad": 6.8,
       "liquidez": 17,
       "cobertura": 140,
       "roa": 0.55,
-      "roe": 5.80,
+      "roe": 5.8,
       "socios_aprox": 52100,
       "estado": "Activa",
       "provincia": "Cotopaxi",
       "supervision": "SEPS",
       "website": "https://www.sanfrancisco.fin.ec",
-      "tipo": "cooperativa"
+      "tipo": "cooperativa",
+      "productos_credito": {
+        "consumo": {
+          "monto_min": 200,
+          "monto_max": 18000,
+          "tasa_min": 14.2,
+          "tasa_max": 19.5,
+          "plazo_max_meses": 48,
+          "requisitos": ["Socio activo", "Cédula", "Ingresos", "Referencias"],
+          "ventajas": ["Trámite ágil", "Requisitos flexibles"]
+        },
+        "microcredito": {
+          "monto_min": 200,
+          "monto_max": 8000,
+          "tasa_min": 18.0,
+          "tasa_max": 25.0,
+          "plazo_max_meses": 36,
+          "requisitos": ["Actividad económica", "RUC/RISE", "Referencias"],
+          "ventajas": ["Acompañamiento técnico"]
+        },
+        "agropecuario": {
+          "monto_min": 500,
+          "monto_max": 25000,
+          "tasa_min": 12.5,
+          "tasa_max": 17.0,
+          "plazo_max_meses": 60,
+          "requisitos": ["Actividad agropecuaria", "Título de propiedad", "Seguro de cultivos"],
+          "ventajas": ["Periodos de gracia", "Pagos estacionales"]
+        }
+      }
     }
   ]
 }
